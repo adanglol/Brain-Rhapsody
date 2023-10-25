@@ -1,0 +1,31 @@
+# Unity generated files
+/Library/
+/Temp/
+/obj/
+/Build/
+/Builds/
+/Logs/
+/UserSettings/
+/ProjectSettings/UnityConnectSettings.asset
+
+
+# macOS directory attributes
+__MACOSX/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Visual Studio files
+.vscode/
+.sln
+.suo
+.suo.user
+*.sln.ide
+*.suo.ide
+
+# Rider files
+.idea/
+
+# Gradle-specific files
+.gradle/
