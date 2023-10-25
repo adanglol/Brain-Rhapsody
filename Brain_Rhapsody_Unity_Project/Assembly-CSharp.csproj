@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{67FD3940-5E35-B8CD-B29B-7BCBFF1623B0}</ProjectGuid>
+    <ProjectGuid>{10893817-76A1-A1C1-BE9B-17DDB2F3484C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,7 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\WeaponFireScript.cs" />
-    <Compile Include="Assets\TopDown 2D RPG BE3\ReadMe\Scripts\ReadmeBE3.cs" />
     <Compile Include="Assets\Scripts\BulletsScript.cs" />
     <Compile Include="Assets\SpawnerScript.cs" />
     <Compile Include="Assets\WeaponCursor.cs" />
