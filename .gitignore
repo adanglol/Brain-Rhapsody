@@ -1,13 +1,13 @@
 # Unity generated files
-/Library/
-/Temp/
-/obj/
-/Build/
-/Builds/
-/Logs/
-/Packages/
-/UserSettings/
-/ProjectSettings/UnityConnectSettings.asset
+Library/
+Temp/
+obj/
+Build/
+Builds/
+Logs/
+Packages/
+UserSettings/
+ProjectSettings/UnityConnectSettings.asset
 
 
 # macOS directory attributes
