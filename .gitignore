@@ -30,3 +30,9 @@ Thumbs.db
 
 # Gradle-specific files
 .gradle/
+
+Brain_Rhapsody_Unity_Project\.vs\Brain_Rhapsody_Jam_2
+Brain_Rhapsody_Unity_Project\.vsconfig
+Brain_Rhapsody_Unity_Project\Assembly-CSharp-Editor.csproj
+Brain_Rhapsody_Unity_Project\Assembly-CSharp.csproj
+Brain_Rhapsody_Unity_Project\Brain_Rhapsody_Jam_2.sln
