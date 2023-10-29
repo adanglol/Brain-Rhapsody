@@ -41,6 +41,11 @@ public class PlayerAbilityControl : MonoBehaviour
         {
             rend.sprite = playerSkins[2];
         }
+        if (Input.GetKeyDown("4"))
+        {
+            rend.sprite = playerSkins[3];
+            Debug.Log("Form 4");
+        }
     }
 
     // private methods

@@ -224,6 +224,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 04562bc13a2407e40ae370dad404125b, type: 3}
   - {fileID: 21300000, guid: d6eb508d2823d8d448e2204650724e3b, type: 3}
   - {fileID: 21300000, guid: 7e3aab7425bf756429ed8c04b4bd55ce, type: 3}
+  - {fileID: 21300000, guid: 768bf658473177546991c5299cda3c80, type: 3}
 --- !u!1001 &290015639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -334,13 +335,17 @@ MonoBehaviour:
   - {fileID: 4156309923625874134, guid: e0471ee1137ac3845b58de12182db8d9, type: 3}
   - {fileID: 4156309923625874134, guid: 654e4ec90697ee24bb7cfb912138ec54, type: 3}
   - {fileID: 4156309923625874134, guid: d9f05ed6c5cee894da9bc28890136aca, type: 3}
+  - {fileID: 2695263013704640761, guid: f8a2ff08d7817044f8cef9ffa17ca4e2, type: 3}
   weaponSkins:
   - {fileID: 21300000, guid: d74318faccd3cfd4792a285e705fc5c5, type: 3}
   - {fileID: 21300000, guid: f9a60b90a6c0d6a4f86694a503171704, type: 3}
   - {fileID: 21300000, guid: d280dad0830093142b2013dcfee178a7, type: 3}
+  - {fileID: 21300000, guid: d74318faccd3cfd4792a285e705fc5c5, type: 3}
   bulletTransform: {fileID: 125417758}
   canFire: 1
   fireDelay: 0.2
+  cowboySpreadBullets: 6
+  cowboySpreadAngle: 30
 --- !u!4 &512305849 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5024416820460314949, guid: bb882b6171c81a544812d92d88ca6c3b, type: 3}
@@ -885,9 +890,17 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7077061772394393651, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
-      propertyPath: weaponSkins.Array.size
-      value: 3
+      propertyPath: playerSkins.Array.size
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7077061772394393651, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
+      propertyPath: weaponSkins.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077061772394393651, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
+      propertyPath: playerSkins.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300026, guid: c3a0ffcab94f86043aa02beca70d680b, type: 3}
     - target: {fileID: 7077061772394393651, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
       propertyPath: weaponSkins.Array.data[0]
       value: 
@@ -900,6 +913,10 @@ PrefabInstance:
       propertyPath: weaponSkins.Array.data[2]
       value: 
       objectReference: {fileID: 21300000, guid: d5353d44d082e9048bf757667d3cecab, type: 3}
+    - target: {fileID: 7077061772394393651, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
+      propertyPath: weaponSkins.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300020, guid: c3a0ffcab94f86043aa02beca70d680b, type: 3}
     - target: {fileID: 8499113336195872616, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
