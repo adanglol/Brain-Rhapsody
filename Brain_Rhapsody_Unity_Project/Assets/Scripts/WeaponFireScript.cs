@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class WeaponFireScript : MonoBehaviour
@@ -17,9 +18,18 @@ public class WeaponFireScript : MonoBehaviour
     private Camera mainCam;
     private Vector3 mousePos;
 
+    // AstroNaut Form Settings charge shot
+    private bool isCharging = false;
+    private float chargeTime = 0.0f;
+    public float maxChargeTime = 3.0f;
+    public float maxChargeDamage = 10.0f;
+
+   
     // Spread Settings for Cowboy Form
     [SerializeField] private int cowboySpreadBullets = 6;
     [SerializeField] private float cowboySpreadAngle = 30f;
+
+    
 
 
     // Start is called before the first frame update
@@ -85,10 +95,27 @@ public class WeaponFireScript : MonoBehaviour
             }
         }
         // fire a bullet if player clicks; timer is reset
-        if (Input.GetMouseButton(0) && canFire)
+        if (Input.GetMouseButtonDown(0) && canFire)
         {
             canFire = false;
-            if (currentFormBullet == bulletSkins[3])
+            if (currentFormBullet == bulletSkins[0])
+            {
+                Debug.Log("AstroNaut Form");
+                isCharging = true;
+              
+            }
+            else if (currentFormBullet == bulletSkins[1])
+            {
+                // ScubaDiver Form
+                StartCoroutine(ScubaBurstFire());
+            }
+            else if (currentFormBullet == bulletSkins[2])
+            {
+                // Mob Boss Form
+                Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
+
+            }
+            else if (currentFormBullet == bulletSkins[3])
             {
                 // Cowboy Form
                 ShootCowboySpread();
@@ -96,14 +123,62 @@ public class WeaponFireScript : MonoBehaviour
             else
             {
                 Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
+            } 
+        }
+
+        if (Input.GetMouseButton(0)){
+            if(currentFormBullet == bulletSkins[2])
+            {
+                // Mob Boss Form
+                Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
+            }
+
+        }
+
+         if (isCharging)
+        {
+            chargeTime += Time.deltaTime;
+            Debug.Log("Charge Time: " + chargeTime);
+
+            // TBI - add visual feedback for charge
+
+            if (chargeTime >= maxChargeTime)
+            {
+                // Fire a charged bullet
+                Debug.Log("Fire Charged Bullet");
+                FireChargedBullet();
+                isCharging = false;
 
             }
-           
-            
         }
-    }
-    
+        
 
+   
+
+      
+       
+    }
+
+    // Method to fire a charged bullet
+     void FireChargedBullet()
+    {
+        // Instantiate the charged bullet with the current damage
+        GameObject chargedBullet = Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
+
+        // Set the bullet's damage based on 'chargeTime' and 'maxChargeDamage'
+
+        // Add a cooldown before the next charge can start
+        StartCoroutine(RechargeCooldown());
+    }
+
+    // Coroutine to add a cooldown before the next charge can start
+     IEnumerator RechargeCooldown()
+    {
+        yield return new WaitForSeconds(2f); // Adjust the recharge cooldown time as needed
+        chargeTime = 0; // Reset charge time
+    }
+   
+   
     // Method handle Cowboy Form's spread shot
     void ShootCowboySpread()
     {
@@ -156,6 +231,19 @@ public class WeaponFireScript : MonoBehaviour
     IEnumerator DelayNextShot(int shotIndex, float delay)
     {
         yield return new WaitForSeconds(shotIndex * delay);
+    }
+
+    // Couroutine for scuba burst fire
+    IEnumerator ScubaBurstFire()
+    {
+        int shotsFired = 0;
+        while (shotsFired < 3)
+        {
+            Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
+            shotsFired++;
+            yield return new WaitForSeconds(0.1f);
+        } 
+
     }
 
    
