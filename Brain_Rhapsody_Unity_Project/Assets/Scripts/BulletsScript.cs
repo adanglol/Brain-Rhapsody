@@ -13,6 +13,11 @@ public class BulletsScript : MonoBehaviour
     private Camera mainCam;
     private Vector3 mousePos;
     private Rigidbody2D rb;
+    
+    private float timer = 0f;
+
+    public float bulletLife = 5f;  // Defines how long before the bullet is destroyed
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,5 +37,7 @@ public class BulletsScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (timer > bulletLife) Destroy(this.gameObject);
+        timer += Time.deltaTime;
     }
 }

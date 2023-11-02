@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBullet1 : MonoBehaviour
 {
-    public float bulletLife = 1f;  // Defines how long before the bullet is destroyed
+    public float bulletLife = 5f;  // Defines how long before the bullet is destroyed
     public float rotation = 0f;
     public float speed = 1f;
 
