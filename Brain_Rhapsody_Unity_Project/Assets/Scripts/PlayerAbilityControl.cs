@@ -5,10 +5,13 @@ using UnityEngine;
 public class PlayerAbilityControl : MonoBehaviour
 {
 
+    //Music Controller Call
+    public musicController musicScript;
+    
     // private variables
 
     private SpriteRenderer rend;
-    private int currentSkin;
+    private int currentSkin;  
 
     [SerializeField] private Sprite[] playerSkins;
     [SerializeField] private Sprite[] weaponSkins;
@@ -24,6 +27,8 @@ public class PlayerAbilityControl : MonoBehaviour
     {
         currentSkin = 0;
         rend = GetComponent<SpriteRenderer>();
+        musicScript = GetComponent<musicController>();
+        
     }
 
     // Update is called once per frame
@@ -32,19 +37,23 @@ public class PlayerAbilityControl : MonoBehaviour
         // change sprite form appearance
         if (Input.GetKeyDown("1")) { 
             rend.sprite = playerSkins[0];
+            musicScript.playerForm = 0;
         }
         if (Input.GetKeyDown("2"))
         {
             rend.sprite = playerSkins[1];
+            musicScript.playerForm = 1;
         }
         if (Input.GetKeyDown("3"))
         {
             rend.sprite = playerSkins[2];
+            musicScript.playerForm = 2;
         }
         if (Input.GetKeyDown("4"))
         {
             rend.sprite = playerSkins[3];
             Debug.Log("Form 4");
+            musicScript.playerForm = 3;
         }
     }
 

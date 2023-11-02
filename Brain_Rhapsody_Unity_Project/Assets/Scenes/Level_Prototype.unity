@@ -341,6 +341,10 @@ MonoBehaviour:
   bulletTransform: {fileID: 125417758}
   canFire: 1
   fireDelay: 0.2
+  maxChargeTime: 3
+  maxChargeDamage: 10
+  cowboySpreadBullets: 6
+  cowboySpreadAngle: 30
 --- !u!4 &512305849 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5024416820460314949, guid: bb882b6171c81a544812d92d88ca6c3b, type: 3}
@@ -356,7 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -364,14 +368,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -438,6 +434,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1063156301}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!4 &571688635 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5024416820460314949, guid: bb882b6171c81a544812d92d88ca6c3b, type: 3}
@@ -568,6 +577,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &1063156308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063156297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b862ba1c680754b43ad8b4386cc2d441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: -1582798130
+      Data2: 1148651486
+      Data3: 12119428
+      Data4: -419031294
+    Path: event:/switchTest
+  trackPlaying: 0
 --- !u!1 &1198679434
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,6 +914,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7077061772394393651, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
+      propertyPath: playerForm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077061772394393651, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
       propertyPath: weaponSkins.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -949,6 +982,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5006103167028921740, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1063156307}
+    - targetCorrespondingSourceObject: {fileID: 5006103167028921740, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1063156308}
   m_SourcePrefab: {fileID: 100100000, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
 --- !u!1001 &8871147868532276509
 PrefabInstance:
