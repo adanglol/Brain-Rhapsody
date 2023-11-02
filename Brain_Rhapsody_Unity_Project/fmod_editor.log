@@ -1,0 +1,179 @@
+[LOG] System::create                           : Header version = 2.02.18. Current version = 2.02.18.
+[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0x0.
+[LOG] SystemI::init                            : Initialize version=20218 (137105), maxchannels=256, flags=0x00020000
+[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD Core Audio Output'
+[LOG] OutputCoreAudio::init                    : Output running 2 channels at 44100Hz sample rate.
+[LOG] OutputCoreAudio::init                    : Maximum hardware read size: 1024 samples, Software buffer size: 512 samples, Number of software buffers: 4.
+[LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
+[LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncManager::init                       : manager 0x7f83463ad008 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : done
+[LOG] PlaybackSystem::init                     : 
+[LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
+[LOG] PlaybackSystem::init                     : done
+[LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
+[LOG] Manager::init                            : done.
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] SystemI::createSound                     : filename = ../../Documents/fmod /music switch test/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Affinity: 0x4000000000000003, Priority: 0xFFFF7FFC, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x7f8342182f98, queue head = 0x7f83424f6778, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8342182f98
+[LOG] SystemI::createSoundInternal             :     Create name='../../Documents/fmod /music switch test/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     filename = ../../Documents/fmod /music switch test/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0x7f834215e158, queue head = 0x7f83424f6778, queue count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3690496
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7680
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f834215ea90
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = ../../Documents/fmod /music switch test/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0x7f83447916a8, queue head = 0x7f83424f6778, queue count = 1
+[LOG] SystemI::createSound                     :     filename = ../../Documents/fmod /music switch test/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0x7f834477c4b8, queue head = 0x7f83424f6778, queue count = 2
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='BR_ConceptMusic_1', format=5, channels=2, frequency=48000, lengthbytes=933312, lengthpcm=3252706, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.891235.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFC, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8342182f98
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f834215e158
+[LOG] SystemI::createSoundInternal             :     Create name='../../Documents/fmod /music switch test/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3690496
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7680
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f834212f660
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='BR_AstronautMusic', format=5, channels=2, frequency=48000, lengthbytes=894784, lengthpcm=3252672, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.998999.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f834215e158
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f83447916a8
+[LOG] SystemI::createSoundInternal             :     Create name='../../Documents/fmod /music switch test/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3690496
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7680
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f83459901a0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Cowboy theme concept 1', format=5, channels=2, frequency=48000, lengthbytes=908352, lengthpcm=3324029, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988647.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f83447916a8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f834477c4b8
+[LOG] SystemI::createSoundInternal             :     Create name='../../Documents/fmod /music switch test/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3690496
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7680
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f8341d674d0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='BR_Concept_5_MOB_v3', format=5, channels=2, frequency=48000, lengthbytes=951616, lengthpcm=3252706, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.987396.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f834477c4b8
+[LOG] SystemI::createSound                     : filename = ../../Documents/fmod /music switch test/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x7f83456adb48, queue head = 0x7f83424f6778, queue count = 0
+[LOG] SystemI::createSound                     : filename = ../../Documents/fmod /music switch test/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x7f8345645198, queue head = 0x7f83424f6778, queue count = 1
+[LOG] SystemI::createSound                     : filename = ../../Documents/fmod /music switch test/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f83456adb48
+[LOG] SystemI::createSoundInternal             :     Create name='../../Documents/fmod /music switch test/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3690496
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7680
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f834560a7d0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x7f8345662c38, queue head = 0x7f83424f6778, queue count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = ../../Documents/fmod /music switch test/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0x7f83447dfec8, queue head = 0x7f83424f6778, queue count = 2
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='BR_ConceptMusic_1', format=5, channels=2, frequency=48000, lengthbytes=933312, lengthpcm=3252706, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.891235.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f83456adb48
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8345645198
+[LOG] SystemI::createSoundInternal             :     Create name='../../Documents/fmod /music switch test/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3690496
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7680
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f834564bfa0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='BR_AstronautMusic', format=5, channels=2, frequency=48000, lengthbytes=894784, lengthpcm=3252672, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.998999.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8345645198
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8345662c38
+[LOG] SystemI::createSoundInternal             :     Create name='../../Documents/fmod /music switch test/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3690496
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7680
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f83456368d0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Cowboy theme concept 1', format=5, channels=2, frequency=48000, lengthbytes=908352, lengthpcm=3324029, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988647.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8345662c38
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f83447dfec8
+[LOG] SystemI::createSoundInternal             :     Create name='../../Documents/fmod /music switch test/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3690496
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7680
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f8341d63490
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='BR_Concept_5_MOB_v3', format=5, channels=2, frequency=48000, lengthbytes=951616, lengthpcm=3252706, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.987396.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f83447dfec8
+[LOG] SoundI::release                          : BR_Concept_5_MOB_v3 (0x7f834477c4b8)
+[LOG] SoundI::release                          :     BR_Concept_5_MOB_v3 (0x7f83421ec8d8)
+[LOG] SoundI::release                          :     BR_Concept_5_MOB_v3 (0x7f834214dc88)
+[LOG] SoundI::release                          : Cowboy theme concept 1 (0x7f83447916a8)
+[LOG] SoundI::release                          :     Cowboy theme concept 1 (0x7f83421f13f8)
+[LOG] SoundI::release                          :     Cowboy theme concept 1 (0x7f83421f1588)
+[LOG] SoundI::release                          : BR_AstronautMusic (0x7f834215e158)
+[LOG] SoundI::release                          :     BR_AstronautMusic (0x7f834562edb8)
+[LOG] SoundI::release                          :     BR_AstronautMusic (0x7f834555b468)
+[LOG] SoundI::release                          : BR_ConceptMusic_1 (0x7f8342182f98)
+[LOG] SoundI::release                          :     BR_ConceptMusic_1 (0x7f83421249f8)
+[LOG] SoundI::release                          :     BR_ConceptMusic_1 (0x7f8342124b88)
+[LOG] SoundI::release                          : BR_Concept_5_MOB_v3 (0x7f83447dfec8)
+[LOG] SoundI::release                          :     BR_Concept_5_MOB_v3 (0x7f83421f2128)
+[LOG] SoundI::release                          :     BR_Concept_5_MOB_v3 (0x7f83421f22b8)
+[LOG] SoundI::release                          : Cowboy theme concept 1 (0x7f8345662c38)
+[LOG] SoundI::release                          :     Cowboy theme concept 1 (0x7f83421f1878)
+[LOG] SoundI::release                          :     Cowboy theme concept 1 (0x7f83421f1a08)
+[LOG] SoundI::release                          : BR_AstronautMusic (0x7f8345645198)
+[LOG] SoundI::release                          :     BR_AstronautMusic (0x7f83421db228)
+[LOG] SoundI::release                          :     BR_AstronautMusic (0x7f83421db3b8)
+[LOG] SoundI::release                          : BR_ConceptMusic_1 (0x7f83456adb48)
+[LOG] SoundI::release                          :     BR_ConceptMusic_1 (0x7f83421dafa8)
+[LOG] SoundI::release                          :     BR_ConceptMusic_1 (0x7f834215da78)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.

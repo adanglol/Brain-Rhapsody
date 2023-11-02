@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{735a1bbf-0ea8-4968-bf2c-f4731dd3b24b}">
+		<property name="name">
+			<value>Track Playing</value>
+		</property>
+		<relationship name="folder">
+			<destination>{a998bfb9-45ce-4a7d-9b69-3533f50ff9ee}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{63b6e2ef-d0a2-4b77-9a70-eb663faa6723}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{63b6e2ef-d0a2-4b77-9a70-eb663faa6723}">
+		<property name="initialValue">
+			<value>0.41999999999999998</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

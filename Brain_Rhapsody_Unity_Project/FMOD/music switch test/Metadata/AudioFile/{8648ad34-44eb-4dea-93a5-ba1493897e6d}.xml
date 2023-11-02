@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{8648ad34-44eb-4dea-93a5-ba1493897e6d}">
+		<property name="assetPath">
+			<value>BR_Concept_5_MOB_v3.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>67.764708333333331</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a40cf987-0813-470a-a661-4fe3ba39d303}</destination>
+		</relationship>
+	</object>
+</objects>
