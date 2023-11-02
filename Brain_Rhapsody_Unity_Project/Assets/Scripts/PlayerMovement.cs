@@ -33,6 +33,10 @@ public class PlayerMovement : MonoBehaviour
         {
             playerSpeed = 3.5f;
         }
+        if(Input.GetKeyDown("4"))
+        {
+            playerSpeed = 5.0f;
+        }
 
         // add velocity, move player
         rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * playerSpeed, Input.GetAxisRaw("Vertical") * playerSpeed);
