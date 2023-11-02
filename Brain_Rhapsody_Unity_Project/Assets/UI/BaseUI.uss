@@ -8,8 +8,17 @@
 
 .start-button {
     background-color: green;
-    top: -254px;
-    font-size: 23px;
+    top: -302px;
+    font-size: 61px;
+    padding-top: 23px;
+    padding-right: 23px;
+    padding-bottom: 23px;
+    padding-left: 23px;
+    -unity-font-definition: url('project://database/Assets/Fonts/PixelifySans-VariableFont_wght%20SDF.asset?fileID=11400000&guid=0d88201dd231e4046984d3dcce6359ce&type=2#PixelifySans-VariableFont_wght SDF');
+    width: 300px;
+    left: 511px;
+    position: relative;
+    height: 75px;
 }
 
 .start-button:hover {
