@@ -16,19 +16,19 @@ public class BackgroundScript : MonoBehaviour
     {
         if (Input.GetKeyDown("1"))
         {
-            rend.color = new Color(0.0f, .06f, .1f);
+            rend.color = new Color(0.0f, .06f, .1f, 0.64f);
         }
         if (Input.GetKeyDown("2"))
         {
-            rend.color = new Color(0.0f, 0.1f, .33f);
+            rend.color = new Color(0.0f, 0.1f, .33f, 0.64f);
         }
         if (Input.GetKeyDown("3"))
         {
-            rend.color = new Color(0.48f, 0.48f, 0.48f);
+            rend.color = new Color(0.48f, 0.48f, 0.48f, 0.64f);
         }
         if (Input.GetKeyDown("4"))
         {
-            rend.color = new Color(0.75f, 0.43f, 0.0f);
+            rend.color = new Color(0.75f, 0.43f, 0.0f, 0.64f);
         }
     }
 }

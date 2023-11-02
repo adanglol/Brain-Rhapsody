@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyBullet1 : MonoBehaviour
 {
+
     public float bulletLife = 5f;  // Defines how long before the bullet is destroyed
     public float rotation = 0f;
     public float speed = 1f;
@@ -24,6 +25,10 @@ public class EnemyBullet1 : MonoBehaviour
         if (timer > bulletLife) Destroy(this.gameObject);
         timer += Time.deltaTime;
         transform.position = Movement(timer);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
     }
     private Vector2 Movement(float timer)
     {

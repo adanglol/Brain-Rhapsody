@@ -3,17 +3,17 @@ using System.Collections.Generic;
 //using Unity.VisualScripting;
 using UnityEngine;
 
-public class BulletsScript : MonoBehaviour
+public class CowboyBullets : MonoBehaviour
 {
     [Header("Bullet Properties")]
 
-    
+
     [SerializeField] private float bulletSpeed;
 
     private Camera mainCam;
     private Vector3 mousePos;
     private Rigidbody2D rb;
-    
+
     private float timer = 0f;
 
     public float bulletLife = 5f;  // Defines how long before the bullet is destroyed
@@ -28,7 +28,7 @@ public class BulletsScript : MonoBehaviour
         Vector3 direction = mousePos - transform.position;
         Vector3 rotation = transform.position - mousePos;
 
-        rb.velocity = new Vector2 (direction.x, direction.y).normalized * bulletSpeed;
+        rb.velocity = new Vector2(direction.x, direction.y).normalized * bulletSpeed;
         float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rot);
 
@@ -39,5 +39,13 @@ public class BulletsScript : MonoBehaviour
     {
         if (timer > bulletLife) Destroy(this.gameObject);
         timer += Time.deltaTime;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Cowboy Enemies")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

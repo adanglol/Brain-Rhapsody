@@ -61,21 +61,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\MusicManager.cs" />
-    <Compile Include="Assets\Scripts\SpawnerScript.cs" />
+    <Compile Include="Assets\CactusEnemyScript.cs" />
+    <Compile Include="Assets\Scripts\ScubaBullets.cs" />
     <Compile Include="Assets\Scripts\PlayerAbilityControl.cs" />
+    <Compile Include="Assets\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\WeaponCursor.cs" />
     <Compile Include="Assets\UI\ButtonClicker.cs" />
+    <Compile Include="Assets\CowboyBullets.cs" />
+    <Compile Include="Assets\Scripts\AlienEnemyScript.cs" />
+    <Compile Include="Assets\Scripts\MermanEnemyScript.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\AnglerEnemyScript.cs" />
+    <Compile Include="Assets\Scripts\AstroBullets.cs" />
     <Compile Include="Assets\Scripts\EnemyBullet1.cs" />
     <Compile Include="Assets\Scripts\WeaponFireScript.cs" />
     <Compile Include="Assets\Scripts\BackgroundScript.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\BulletsScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI\BaseUI.uss" />
+    <None Include="Assets\ShootingSound\ReadMe.txt" />
     <None Include="Assets\Pixel Monster Pack\notes.txt" />
     <None Include="Assets\UI\MainUI.uxml" />
     <None Include="Assets\UI\Button.uxml" />
