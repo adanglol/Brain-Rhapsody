@@ -1,7 +1,7 @@
 .header {
     color: rgb(161, 236, 28);
     font-size: 80px;
-    right: -340px;
+    right: -650px;
     -unity-font: url('project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=94ccf13dbc8840b40969eac251d203c1&type=3#NotInter-Regular');
     -unity-font-definition: url('project://database/Assets/Fonts/PixelifySans-VariableFont_wght%20SDF.asset?fileID=11400000&guid=0d88201dd231e4046984d3dcce6359ce&type=2#PixelifySans-VariableFont_wght SDF');
 }
@@ -23,6 +23,6 @@
 
 .start-button:hover {
     background-color: rgb(255, 90, 90);
-    border-radius: 10px;
+    border-radius: 20px;
     color: white;
 }
