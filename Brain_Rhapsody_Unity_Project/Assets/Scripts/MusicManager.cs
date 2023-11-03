@@ -14,7 +14,6 @@ public class MusicManager : MonoBehaviour
         musicTracks[2].enabled = true;
         musicTracks[3].enabled = true;
 
-        Debug.Log("in musicv manager");
         musicTracks[0].Play();
 
         musicTracks[1].Play();

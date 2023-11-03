@@ -9,8 +9,6 @@ public class WeaponFireScript : MonoBehaviour
 
     private float timer;
     private GameObject currentFormBullet;
-
-    [SerializeField] private Sprite[] weaponSkins;
     [SerializeField] private Transform bulletTransform;
     [SerializeField] private bool canFire;
     [SerializeField] private float fireDelay;
