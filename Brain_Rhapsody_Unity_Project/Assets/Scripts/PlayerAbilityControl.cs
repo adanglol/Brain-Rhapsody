@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class PlayerAbilityControl : MonoBehaviour
 {
-    
+
     // private variables
 
     private SpriteRenderer rend;
-    private int currentSkin;  
 
     [SerializeField] private Sprite[] playerSkins;
-    [SerializeField] private Sprite[] weaponSkins;
 
     // player stats
 
@@ -22,16 +20,15 @@ public class PlayerAbilityControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentSkin = 0;
         rend = GetComponent<SpriteRenderer>();
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        // change sprite form appearance
+        // read for form change button; change skin and music when pressed
         if (Input.GetKeyDown("1")) { 
+
             rend.sprite = playerSkins[0];
         }
         if (Input.GetKeyDown("2"))
@@ -46,28 +43,6 @@ public class PlayerAbilityControl : MonoBehaviour
         {
             rend.sprite = playerSkins[3];
             Debug.Log("Form 4");
-        }
-    }
-
-    // private methods
-    
-    //possible different method of shifting forms
-    private void ChangeSkin()
-    {
-        if (currentSkin == 0)
-        {
-            rend.sprite = playerSkins[1];
-            currentSkin++;
-        }
-        else if (currentSkin == 1)
-        {
-            rend.sprite = playerSkins[2];
-            currentSkin++;
-        }
-        else if (currentSkin == 2)
-        {
-            rend.sprite = playerSkins[0];
-            currentSkin = 0;
         }
     }
 }

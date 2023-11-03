@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 272234229
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1d98195b762487443b91f80c6b3dce0c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 66374e2dec075b74192b996fc7ef2adc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114,10 +114,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSkins:
-  - {fileID: 21300000, guid: 1d98195b762487443b91f80c6b3dce0c, type: 3}
-  - {fileID: 21300000, guid: c50502eaf434eca458b44aac45e8e65c, type: 3}
-  - {fileID: 21300000, guid: 965bd1a490538104f8b9adf54c9abd19, type: 3}
-  weaponSkins: []
+  - {fileID: 21300000, guid: b0524465b35cbaa4285bc2e8a7445e02, type: 3}
+  - {fileID: 21300000, guid: b28f0352ed041c241bf98692bdaa7758, type: 3}
+  - {fileID: 21300000, guid: dc33e107d34aafb45abdb41b29877eac, type: 3}
+  - {fileID: 21300000, guid: 534ab3b0e36c51248a15ee63c36a85a0, type: 3}
+  musicTracks:
+  - {fileID: 6490871844942944301, guid: 03f20133ff3ebd541bbdfeaa19e356c3, type: 3}
+  - {fileID: 9175597174314169644, guid: 14a138b08b79456489ba624aa486ad14, type: 3}
+  - {fileID: 3462394482811679734, guid: 9d2cc6dc5a2e3a24ca84b32640af79f3, type: 3}
+  - {fileID: 7830677090177035475, guid: cfd0128f510e3764284c15e0e95e361d, type: 3}
   fireRate: 0
   power: 0
 --- !u!114 &2412862958864580094

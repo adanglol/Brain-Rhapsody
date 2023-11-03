@@ -15,6 +15,11 @@ public class WeaponFireScript : MonoBehaviour
     [SerializeField] private bool canFire;
     [SerializeField] private float fireDelay;
 
+    [SerializeField] private AudioSource astroFire;
+    [SerializeField] private AudioSource scubaFire;
+    [SerializeField] private AudioSource mobFire;
+    [SerializeField] private AudioSource cowboyFire;
+
     private Camera mainCam;
     private Vector3 mousePos;
 
@@ -27,7 +32,7 @@ public class WeaponFireScript : MonoBehaviour
    
     // Spread Settings for Cowboy Form
     [SerializeField] private int cowboySpreadBullets = 6;
-    [SerializeField] private float cowboySpreadAngle = 30f;
+    [SerializeField] private float cowboySpreadAngle = 60f;
 
     
 
@@ -36,6 +41,7 @@ public class WeaponFireScript : MonoBehaviour
     void Start()
     {
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
 
         //player starts with base form
         canFire = true;
@@ -98,38 +104,31 @@ public class WeaponFireScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && canFire)
         {
             canFire = false;
-            if (currentFormBullet == bulletSkins[0])
+            if (currentFormBullet == bulletSkins[0]) //Astronaut fire weapon
             {
-                Debug.Log("AstroNaut Form");
-                isCharging = true;
-              
+                Debug.Log("Astronaut Form");
+                //isCharging = true;
+                Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
+                astroFire.Play();
+
             }
-            else if (currentFormBullet == bulletSkins[1])
+            
+
+            else if (currentFormBullet == bulletSkins[1]) //Scuba Fire Weapon
             {
                 // ScubaDiver Form
                 StartCoroutine(ScubaBurstFire());
             }
-            else if (currentFormBullet == bulletSkins[2])
-            {
-                // Mob Boss Form
-                Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
-
-            }
-            else if (currentFormBullet == bulletSkins[3])
+            else if (currentFormBullet == bulletSkins[3]) // Cowboy Fire Weapon
             {
                 // Cowboy Form
                 ShootCowboySpread();
             }
-            else
-            {
-                Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
-            } 
         }
 
-        if (Input.GetMouseButton(0)){
+        if (Input.GetMouseButton(0)){ // Mob Boss Fire Weapon
             if(currentFormBullet == bulletSkins[2])
             {
-                // Mob Boss Form
                 Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
             }
 
@@ -216,6 +215,9 @@ public class WeaponFireScript : MonoBehaviour
             // Instantiate the bullet at the calculated position
             GameObject bullet = Instantiate(currentFormBullet, spreadPosition, Quaternion.identity);
 
+            //Play sound effect
+            cowboyFire.Play();
+
             // bullet.transform.rotation = Quaternion.Euler(0, 0, angle);
             // Set the bullet's velocity
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
@@ -240,8 +242,9 @@ public class WeaponFireScript : MonoBehaviour
         while (shotsFired < 3)
         {
             Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
+            scubaFire.Play();
             shotsFired++;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.2f);
         } 
 
     }

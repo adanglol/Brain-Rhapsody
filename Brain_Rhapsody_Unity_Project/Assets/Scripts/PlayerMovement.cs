@@ -21,23 +21,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("1"))
-        {
-            playerSpeed = 7.5f;
-        }
-        if (Input.GetKeyDown("2"))
-        {
-            playerSpeed = 10.0f;
-        }
-        if (Input.GetKeyDown("3"))
-        {
-            playerSpeed = 3.5f;
-        }
-        if(Input.GetKeyDown("4"))
-        {
-            playerSpeed = 5.0f;
-        }
-
         // add velocity, move player
         rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * playerSpeed, Input.GetAxisRaw("Vertical") * playerSpeed);
         
