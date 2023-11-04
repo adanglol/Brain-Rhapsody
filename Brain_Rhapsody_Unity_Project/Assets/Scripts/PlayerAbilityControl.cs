@@ -18,8 +18,7 @@ public class PlayerAbilityControl : MonoBehaviour
     void Start()
     {
         rend = GetComponent<SpriteRenderer>();
-        // set default skin
-        rend.sprite = playerSkins[0];
+        
     }
 
     // Update is called once per frame
@@ -28,24 +27,21 @@ public class PlayerAbilityControl : MonoBehaviour
         if (Input.GetKeyDown("1")) { 
             pause = true;
             rend.sprite = playerSkins[0];
-
-            rend.sprite = playerSkins[1];
         }
         if (Input.GetKeyDown("2"))
         {
-            rend.sprite = playerSkins[2];
             pause = true;
-
+            rend.sprite = playerSkins[1];
         }
         if (Input.GetKeyDown("3"))
         {
             pause = true;
-            rend.sprite = playerSkins[3];
+            rend.sprite = playerSkins[2];
         }
         if (Input.GetKeyDown("4"))
         {
             pause = true;
-            rend.sprite = playerSkins[4];
+            rend.sprite = playerSkins[3];
             Debug.Log("Form 4");
         }
        
