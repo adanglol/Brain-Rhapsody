@@ -14,7 +14,6 @@ public class MusicManager : MonoBehaviour
         musicTracks[2].enabled = true;
         musicTracks[3].enabled = true;
 
-        Debug.Log("in musicv manager");
         musicTracks[0].Play();
 
         musicTracks[1].Play();
@@ -59,5 +58,27 @@ public class MusicManager : MonoBehaviour
             musicTracks[2].mute = true;
             musicTracks[3].mute = false;
         }
+
+        pauseCheck();
+
     }
+
+    void pauseCheck()
+    {
+        if (Time.timeScale == 0)
+        {
+            musicTracks[0].Pause();
+            musicTracks[1].Pause();
+            musicTracks[2].Pause();
+            musicTracks[3].Pause();
+        }
+        else
+        {
+            musicTracks[0].UnPause();
+            musicTracks[1].UnPause();
+            musicTracks[2].UnPause();
+            musicTracks[3].UnPause();
+        }
+    }
+
 }
