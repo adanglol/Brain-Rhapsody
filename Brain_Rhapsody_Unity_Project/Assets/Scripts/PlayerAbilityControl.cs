@@ -10,11 +10,6 @@ public class PlayerAbilityControl : MonoBehaviour
     private SpriteRenderer rend;
 
     [SerializeField] private Sprite[] playerSkins;
-
-    // player stats
-
-    [SerializeField] private float fireRate;
-    [SerializeField] private float power;
     private float delayTimer = 0f;
     private bool pause;
 

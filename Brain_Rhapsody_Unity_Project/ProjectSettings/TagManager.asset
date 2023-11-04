@@ -12,6 +12,7 @@ TagManager:
   - Scuba Bullet
   - Mob Bullet
   - Cowboy Bullet
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Astro State
   - Cowboy State
   - Mob State
-  - 
+  - Walls
   - 
   - 
   - 

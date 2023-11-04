@@ -41,27 +41,21 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets/Scripts/MusicManager.cs" />
-     <Compile Include="Assets/Scripts/musicController.cs" />
-     <Compile Include="Assets/CactusEnemyScript.cs" />
-     <Compile Include="Assets/Scripts/ScubaBullets.cs" />
      <Compile Include="Assets/Scripts/PlayerAbilityControl.cs" />
-     <Compile Include="Assets/EnemySpawner.cs" />
+     <Compile Include="Assets/Scripts/EnemyScript.cs" />
      <Compile Include="Assets/Scripts/GameManager.cs" />
      <Compile Include="Assets/Scripts/WeaponCursor.cs" />
      <Compile Include="Assets/UI/ButtonClicker.cs" />
      <Compile Include="Assets/HealthHeartSystem/Scripts/HealthBarHUDTester.cs" />
-     <Compile Include="Assets/CowboyBullets.cs" />
-     <Compile Include="Assets/Scripts/AlienEnemyScript.cs" />
-     <Compile Include="Assets/Scripts/MermanEnemyScript.cs" />
      <Compile Include="Assets/Scripts/Menu.cs" />
+     <Compile Include="Assets/Scripts/EnemyBulletScript.cs" />
      <Compile Include="Assets/HealthHeartSystem/Scripts/HealthBarController.cs" />
      <Compile Include="Assets/Scripts/PlayerHealth.cs" />
-     <Compile Include="Assets/Scripts/AnglerEnemyScript.cs" />
-     <Compile Include="Assets/Scripts/AstroBullets.cs" />
-     <Compile Include="Assets/Scripts/EnemyBullet1.cs" />
      <Compile Include="Assets/Scripts/WeaponFireScript.cs" />
      <Compile Include="Assets/HealthHeartSystem/Scripts/PlayerStats.cs" />
+     <Compile Include="Assets/Scripts/EnemySpawner.cs" />
      <Compile Include="Assets/Scripts/BackgroundScript.cs" />
+     <Compile Include="Assets/Scripts/PlayerBulletScript.cs" />
      <Compile Include="Assets/Scripts/PlayerMovement.cs" />
      <None Include="Assets/UI/BaseUI.uss" />
      <None Include="Assets/ShootingSound/ReadMe.txt" />

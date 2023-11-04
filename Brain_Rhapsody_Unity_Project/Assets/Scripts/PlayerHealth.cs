@@ -9,10 +9,12 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private AudioSource hitSound;
 
     private int currentForm;
+    private SpriteRenderer playerSprite;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerSprite = GetComponent<SpriteRenderer>();
         currentHealth = maxHealth;
         currentForm = 0;
     }
@@ -26,32 +28,59 @@ public class PlayerHealth : MonoBehaviour
             //TBI Change to death scene
             Debug.Log("Player Dead");
         }
+        if (Input.GetKeyDown("1")) { 
+            currentForm = 1;
+        }
+        if (Input.GetKeyDown("2"))
+        {
+            currentForm = 2;
+        }
+        if (Input.GetKeyDown("3"))
+        {
+            currentForm = 3;
+
+        }
+        if (Input.GetKeyDown("4"))
+        {
+            currentForm = 4;
+        }
+
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other){
+        if (other.gameObject.CompareTag("Astro Enemies") && currentForm != 1)
+        {
+            StartCoroutine(hitAnimation());
+            currentHealth--;
+            hitSound.Play();
+            Debug.Log("Player Health: " + currentHealth);
+        }
+        else if (other.gameObject.CompareTag("Scuba Enemies") && currentForm != 2)
+        {            
+            StartCoroutine(hitAnimation());
+            currentHealth--;
+            hitSound.Play();
+            Debug.Log("Player Health: " + currentHealth);
+        }
+        else if (other.gameObject.CompareTag("Mob Enemies") && currentForm != 3)
+        {
+            StartCoroutine(hitAnimation());
+            currentHealth--;
+            hitSound.Play();
+            Debug.Log("Player Health: " + currentHealth);
+        }
+        else if (other.gameObject.CompareTag("Cowboy Enemies") && currentForm != 4)
+        {
+            StartCoroutine(hitAnimation());
+            currentHealth--;
+            hitSound.Play();
+            Debug.Log("Player Health: " + currentHealth);
+        }
+    }
+    IEnumerator hitAnimation()
     {
-        if (collision.collider.tag == "Astro Enemies" && currentForm != 0)
-        {
-            currentHealth--;
-            hitSound.Play();
-            Debug.Log("Player Health: " + currentHealth);
-        }
-        else if (collision.collider.tag == "Scuba Enemies" && currentForm != 1)
-        {
-            currentHealth--;
-            hitSound.Play();
-            Debug.Log("Player Health: " + currentHealth);
-        }
-        else if (collision.collider.tag == "Mob Enemies" && currentForm != 2)
-        {
-            currentHealth--;
-            hitSound.Play();
-            Debug.Log("Player Health: " + currentHealth);
-        }
-        else if (collision.collider.tag == "Cowboy Enemies" && currentForm != 3)
-        {
-            currentHealth--;
-            hitSound.Play();
-            Debug.Log("Player Health: " + currentHealth);
-        }
+        playerSprite.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        playerSprite.color = Color.white;
+
     }
 }
