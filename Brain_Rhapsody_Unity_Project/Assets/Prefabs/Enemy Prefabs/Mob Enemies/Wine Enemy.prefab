@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2018593136206596887}
   - component: {fileID: 4589360178393887050}
   - component: {fileID: 5487361843433739877}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wine Enemy
   m_TagString: Mob Enemies
   m_Icon: {fileID: 0}
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0880f1780eb4f33b488d936e217613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mechType: 0
   enemyType: 0
   chaseTarget: {fileID: 0}
   enemyHealth: 0
@@ -106,7 +107,6 @@ MonoBehaviour:
   bulletsPerShot: 0
   shotDelay: 0
   bulletPrefab: {fileID: 0}
-  enemyDeathSound: {fileID: 0}
 --- !u!50 &4589360178393887050
 Rigidbody2D:
   serializedVersion: 4

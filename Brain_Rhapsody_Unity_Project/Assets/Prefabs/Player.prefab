@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3185356678829002887}
   - component: {fileID: 2708417894504470256}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: damage_sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6886108282893299598}
   - component: {fileID: 3762056807682521357}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WeaponRotationPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 3032125717097647064}
   - component: {fileID: 2400911659112138012}
   - component: {fileID: 8815597687795265466}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 5630172695154829205}
   - component: {fileID: 8781964409664335189}
   - component: {fileID: 2069031386198530442}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3037416682305560551}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.34, y: 0.34, z: 0.34}
   m_ConstrainProportionsScale: 1
@@ -376,7 +376,7 @@ SpriteRenderer:
   m_SortingLayerID: 272234229
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b0524465b35cbaa4285bc2e8a7445e02, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 66374e2dec075b74192b996fc7ef2adc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -413,7 +413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSkins:
-  - {fileID: 21300000, guid: eb6122fea37fdeb409308db4ae0b5624, type: 3}
+  - {fileID: 21300000, guid: 66374e2dec075b74192b996fc7ef2adc, type: 3}
   - {fileID: 21300000, guid: b0524465b35cbaa4285bc2e8a7445e02, type: 3}
   - {fileID: 21300000, guid: b28f0352ed041c241bf98692bdaa7758, type: 3}
   - {fileID: 21300000, guid: dc33e107d34aafb45abdb41b29877eac, type: 3}
@@ -522,7 +522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7593000155066562896}
   - component: {fileID: 3562372503948813737}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: machine_gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -650,7 +650,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2537930341324256680}
   - component: {fileID: 1776267354850594617}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cannon_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -778,7 +778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2210195877081996158}
   - component: {fileID: 1812055737915961911}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: crossbow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -906,7 +906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3200911130777861829}
   - component: {fileID: 4066519859694751733}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: laser_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1035,7 +1035,7 @@ GameObject:
   - component: {fileID: 184853300781605774}
   - component: {fileID: 4822466488025124091}
   - component: {fileID: 6969807985009434085}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1090,9 +1090,9 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 136.8
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.38
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

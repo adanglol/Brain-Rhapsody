@@ -47,8 +47,6 @@ public class WeaponFireScript : MonoBehaviour
 
         // variable to reference main camera 
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-
-        Debug.Log("WeaponFireScript Start()");
     }
 
     // Update is called once per frame

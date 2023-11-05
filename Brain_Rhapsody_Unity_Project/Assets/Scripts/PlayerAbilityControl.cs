@@ -59,7 +59,6 @@ public class PlayerAbilityControl : MonoBehaviour
         {
             Time.timeScale = 0;
             delayTimer += Time.fixedDeltaTime;
-            Debug.Log(delayTimer);
             if (delayTimer > 5)
             {
                 pause = false;

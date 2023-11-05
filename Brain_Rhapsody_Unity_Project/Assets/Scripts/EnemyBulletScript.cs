@@ -5,9 +5,8 @@ using UnityEngine;
 public class EnemyBulletScript : MonoBehaviour
 {
 
-    public float bulletLife = 5f;  // Defines how long before the bullet is destroyed
-    public float rotation = 0f;
-    public float speed = 1f;
+    [SerializeField] private float bulletLife = 5f;  // Defines how long before the bullet is destroyed
+    [SerializeField] private  float speed = 1f;
 
 
     private Vector2 spawnPoint;
@@ -22,7 +21,10 @@ public class EnemyBulletScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer > bulletLife) Destroy(this.gameObject);
+        if (timer > bulletLife)
+        {
+            Destroy(this.gameObject);
+        }
         timer += Time.deltaTime;
         transform.position = Movement(timer);
     }
@@ -36,6 +38,23 @@ public class EnemyBulletScript : MonoBehaviour
         float x = timer * speed * transform.right.x;
         float y = timer * speed * transform.right.y;
         return new Vector2(x + spawnPoint.x, y + spawnPoint.y);
+    }
+    // --------------------Setter and Getters------------------------
+    public void SetSpeed(float newSpeed)
+    {
+        speed = newSpeed;
+    }
+    public float GetSpeed()
+    {
+        return speed;
+    }
+    public void SetBulletLife(float newBulletLife)
+    {
+        bulletLife = newBulletLife;
+    }
+    public float GetBulletLife()
+    {
+        return bulletLife;
     }
 
 }

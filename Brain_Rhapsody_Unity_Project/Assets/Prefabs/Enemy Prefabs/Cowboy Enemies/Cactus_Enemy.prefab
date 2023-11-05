@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9188277909665720646}
   - component: {fileID: 1510520119097197179}
   - component: {fileID: 6308868558530281515}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cactus_Enemy
   m_TagString: Cowboy Enemies
   m_Icon: {fileID: 0}
@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0880f1780eb4f33b488d936e217613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mechType: 0
   enemyType: 0
   chaseTarget: {fileID: 0}
   enemyHealth: 0
@@ -178,4 +179,3 @@ MonoBehaviour:
   bulletsPerShot: 0
   shotDelay: 0
   bulletPrefab: {fileID: 0}
-  enemyDeathSound: {fileID: 0}

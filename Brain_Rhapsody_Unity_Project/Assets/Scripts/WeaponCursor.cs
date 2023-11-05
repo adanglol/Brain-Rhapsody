@@ -33,8 +33,6 @@ public class WeaponCursor : MonoBehaviour
         if (Input.GetKeyDown("4"))
         {
             rend.sprite = weaponSkins[3];
-            Debug.Log("Form 4 BULLET");
-            // rend.sprite = weaponSkins[3];
         }
     }
 }
