@@ -31,7 +31,7 @@ public class EnemyScript : MonoBehaviour
     //Assign the corresponding prefabs for the individual enemy in inspector
     [Header("Enemy Assets")]
     [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private AudioSource enemyDeathSound;
+    //[SerializeField] private AudioSource enemyDeathSound;
 
 
     //private utility variables
@@ -147,7 +147,7 @@ public class EnemyScript : MonoBehaviour
 
     IEnumerator enemyDeath(){
         enemySprite.color = Color.black;
-        enemyDeathSound.Play();
+        //enemyDeathSound.Play();
         yield return new WaitForSeconds(1.0f);
         Destroy(this.gameObject);
     }
