@@ -40,7 +40,7 @@ public class WeaponFireScript : MonoBehaviour
     private int currentForm;
   
     void Awake(){
-        currentForm = 10;
+        // currentForm = 10;
     }
 
     // Start is called before the first frame update
@@ -124,7 +124,7 @@ public class WeaponFireScript : MonoBehaviour
             canFire = false;
             switch(currentForm)
             {
-                case 0:
+                case 1:
                     // AstroNaut Form SHOOT
                     if(playerHealth.formStatus[0] == true)
                     {
@@ -132,7 +132,7 @@ public class WeaponFireScript : MonoBehaviour
                         astroFire.Play();
                     }
                     break;
-                case 1:
+                case 2:
                     // ScubaDiver Form SHOOT
                     if(playerHealth.formStatus[1] == true)
                     {
@@ -140,14 +140,14 @@ public class WeaponFireScript : MonoBehaviour
 
                     }
                     break;
-                case 3:
+                case 4:
                     // Cowboy Form SHOOT
                     if(playerHealth.formStatus[3] == true)
                     {
                         ShootCowboySpread();
                     }
                     break;
-                case 10: //base player form is 10
+                case 0: //base player form is 10
                     break;
             }
         }

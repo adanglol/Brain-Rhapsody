@@ -59,7 +59,7 @@ public class PlayerHealth : MonoBehaviour
         // Grab the sprite renderer component
         rend = GetComponent<SpriteRenderer>();
         // set default skin
-        rend.sprite = playerSkins[4];
+        rend.sprite = playerSkins[0];
 
         //SETTING THE CURRENT FORM TO 0 base form
         currentForm = 0;
@@ -134,7 +134,7 @@ public class PlayerHealth : MonoBehaviour
             if(Input.GetKeyDown("1"))
             {
                 pause = true;
-                currentForm = 0;
+                currentForm = 1;
                 Debug.Log("Switched to Form " + currentForm);
                 rend.sprite = playerSkins[currentForm];
                 // make form ICON UI transparent
@@ -409,7 +409,7 @@ public class PlayerHealth : MonoBehaviour
                 UpdateHealthUI();
                 Debug.Log("Switched to Form " + currentForm);
                 // Switch to the next form sprite
-                rend.sprite = playerSkins[currentForm];
+                rend.sprite = playerSkins[currentForm - 1];
                 // Switch to the next bullet skin for the weapon
                 weaponFireScript.currentFormBullet = weaponFireScript.bulletSkins[currentForm - 1];
                 // // Switch the weapon as well
