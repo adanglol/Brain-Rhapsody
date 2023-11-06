@@ -613,7 +613,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &831319182
@@ -1653,10 +1653,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1206745511273571096, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
-      propertyPath: m_Name
-      value: Astro Damage Sound
-      objectReference: {fileID: 0}
     - target: {fileID: 1922114152032234755, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1701,14 +1697,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3762056807682521357, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
-      propertyPath: fireDelay
-      value: 0.5
+    - target: {fileID: 5630172695154829205, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
+      propertyPath: playerSkins.Array.size
+      value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 4822466488025124091, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
-      propertyPath: orthographic size
-      value: 8
-      objectReference: {fileID: 0}
+    - target: {fileID: 5630172695154829205, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
+      propertyPath: playerSkins.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 66374e2dec075b74192b996fc7ef2adc, type: 3}
     - target: {fileID: 5630172695154829205, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
       propertyPath: healthBarContainers.Array.data[0]
       value: 
@@ -1725,8 +1721,7 @@ PrefabInstance:
       propertyPath: healthBarContainers.Array.data[3]
       value: 
       objectReference: {fileID: 861657232}
-    m_RemovedComponents:
-    - {fileID: 966184848212159064, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

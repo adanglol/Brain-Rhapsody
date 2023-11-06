@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
@@ -34,11 +35,13 @@ public class WeaponFireScript : MonoBehaviour
 
     // playerhealth script reference
     public PlayerHealth playerHealth;
+
+    //private utils
+    private int currentForm;
   
-
-
-    
-
+    void Awake(){
+        currentForm = 10;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -58,7 +61,7 @@ public class WeaponFireScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int currentForm = playerHealth.currentForm;
+        currentForm = playerHealth.currentForm;
         Debug.Log("Player Form: aaa" + "" + currentForm);
         // rotate player aim cursor
 
@@ -111,29 +114,28 @@ public class WeaponFireScript : MonoBehaviour
             switch(currentForm)
             {
                 case 0:
-                    break;
-                case 1:
                     // AstroNaut Form SHOOT
                     Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
                     astroFire.Play();
                     break;
-                case 2:
+                case 1:
                     // ScubaDiver Form SHOOT
                     StartCoroutine(ScubaBurstFire());
                     break;
-                case 4:
+                case 3:
                     // Cowboy Form SHOOT
                     ShootCowboySpread();
                     break;
+                case 10: //base player form is 10
+                    break;
             }
         }
-
-        if (Input.GetMouseButton(0)){ // Mob Boss Fire Weapon
-            if(currentFormBullet == bulletSkins[2] && canFire && currentForm == 3)
+        //Mob Boss Shoot Weapon
+        if (Input.GetMouseButton(0)){ 
+            if(currentFormBullet == bulletSkins[2] && canFire && currentForm == 2)
             {
                 Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
             }
-
         }
 
          if (isCharging)
