@@ -14,22 +14,55 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private AudioSource hitSound;
 
     // THE CURRENT FORM THE PLAYER IS IN
-    private int currentForm;
+    public int currentForm;
+    // Refer to keep track of how many forms are still alive
+    private int remainingForms;
+    // Array keep track of status of each form (alive or dead)
+    private bool[] formStatus;
 
     // Reference to the player's health bar for UI for each form
     public RectTransform[] healthBarContainers;
 
     // sprite for our health unit
     public Sprite healthUnitSprite;
+
+    // PLayer Sprite for each form
+    private SpriteRenderer rend;
+
+    [SerializeField] private Sprite[] playerSkins;
+
+    // player stats
+
+    [SerializeField] private float fireRate;
+    [SerializeField] private float power;
+    private float delayTimer = 0f;
+    private bool pause;
+
+    // Reference to the weapon fire script
+    public WeaponFireScript weaponFireScript;
+
+    // Referene to weapon cursor script
+    public WeaponCursor weaponCursorScript;
+  
     void Start()
     {
+      
+        // Grab the sprite renderer component
+        rend = GetComponent<SpriteRenderer>();
+        // set default skin
+        rend.sprite = playerSkins[0];
+
         //SETTING THE CURRENT FORM TO 0 base form
         currentForm = 0;
-        // INITIALIZE HEALTH VALUES FOR FORMS
+        // Initially all forms are alive
+        remainingForms = 4;
+        // INITIALIZE HEALTH VALUES FOR FORMS AND STATUS
         formHealth  = new int[4];
+        formStatus = new bool[4];
         for(int i = 0; i < 4; i++)
         {
-            formHealth[i] = maxHealth / 4;
+            formHealth[i] = maxHealth / 4; // Each form has 1/4 of the max health
+            formStatus[i] = true; // Alive
         }
         // Loop through each form's health container astro - cowboy
         for (int i = 0; i < healthBarContainers.Length; i++)
@@ -66,35 +99,55 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+
         if(Input.GetKeyDown("1"))
         {
-            currentForm = 1;
-            Debug.Log("Switched to Form " + currentForm);
+                pause = true;
+                currentForm = 1;
+                Debug.Log("Switched to Form " + currentForm);
+                rend.sprite = playerSkins[currentForm];
         }
 
         if (Input.GetKeyDown("2"))
         {
-            currentForm = 2;
-            Debug.Log("Switched to Form " + currentForm);
+                pause = true;
+                currentForm = 2;
+                Debug.Log("Switched to Form " + currentForm);
+                rend.sprite = playerSkins[currentForm];
         }
 
         if (Input.GetKeyDown("3"))
         {
-            currentForm = 3;
-            Debug.Log("Switched to Form " + currentForm);
+                pause = true;
+                currentForm = 3;
+                Debug.Log("Switched to Form " + currentForm);
+                rend.sprite = playerSkins[currentForm];
         }
 
         if (Input.GetKeyDown("4"))
         {
-            currentForm = 4;
-            Debug.Log("Switched to Form " + currentForm);
+                pause = true;
+                currentForm = 4;
+                Debug.Log("Switched to Form " + currentForm);
+                rend.sprite = playerSkins[currentForm];
         }
+        if (pause)
+        {
+            Time.timeScale = 0;
+            delayTimer += Time.fixedDeltaTime;
+            if (delayTimer > 5)
+            {
+                pause = false;
+                delayTimer = 0;
+                Time.timeScale = 1;
+            }
+        }
+            
         // Switch between forms shown on the UI for health
         switch(currentForm)
         {
             case 0:
-                Debug.Log(currentForm);
+                // Debug.Log(currentForm);
                 healthBarContainers[0].gameObject.SetActive(false);
                 healthBarContainers[1].gameObject.SetActive(false);
                 healthBarContainers[2].gameObject.SetActive(false);
@@ -102,14 +155,14 @@ public class PlayerHealth : MonoBehaviour
                 break;
 
             case 1:
-                Debug.Log(currentForm);
+                // Debug.Log(currentForm);
                 healthBarContainers[0].gameObject.SetActive(true);
                 healthBarContainers[1].gameObject.SetActive(false);
                 healthBarContainers[2].gameObject.SetActive(false);
                 healthBarContainers[3].gameObject.SetActive(false);
                 break;
             case 2:
-                Debug.Log(currentForm);
+                // Debug.Log(currentForm);
                 healthBarContainers[0].gameObject.SetActive(false);
                 healthBarContainers[1].gameObject.SetActive(true);
                 healthBarContainers[2].gameObject.SetActive(false);
@@ -117,14 +170,14 @@ public class PlayerHealth : MonoBehaviour
                 break;
                 
             case 3:
-                Debug.Log(currentForm);
+                // Debug.Log(currentForm);
                 healthBarContainers[0].gameObject.SetActive(false);
                 healthBarContainers[1].gameObject.SetActive(false);
                 healthBarContainers[2].gameObject.SetActive(true);
                 healthBarContainers[3].gameObject.SetActive(false);
                 break;
             case 4:
-                Debug.Log(currentForm);
+                // Debug.Log(currentForm);
                 healthBarContainers[0].gameObject.SetActive(false);
                 healthBarContainers[1].gameObject.SetActive(false);
                 healthBarContainers[2].gameObject.SetActive(false);
@@ -139,41 +192,79 @@ public class PlayerHealth : MonoBehaviour
             if (collision.collider.CompareTag("Astro Enemies") && currentForm != 1)
             {
                 // TAKE DAMAGE
-                formHealth[currentForm - 1] -= 1; // Adjust for zero-based indexing
-                // PLAY SOUND
-                hitSound.Play();
-                // UPDATE UI FOR THAT FORM
-                UpdateHealthUI();
+               TakeDamage();
             }
             else if (collision.collider.CompareTag("Scuba Enemies") && currentForm != 2)
             {
                 // TAKE DAMAGE
-                formHealth[currentForm - 1] -= 1; // Adjust for zero-based indexing
-                // PLAY SOUND
-                hitSound.Play();
-                // UPDATE UI FOR THAT FORM
-                UpdateHealthUI();
+                TakeDamage();
             }
             else if (collision.collider.CompareTag("Mob Enemies") && currentForm != 3)
             {
-                // TAKE DAMAGE
-                formHealth[currentForm - 1] -= 1; // Adjust for zero-based indexing
-                // PLAY SOUND
-                hitSound.Play();
-                // UPDATE UI FOR THAT FORM
-                UpdateHealthUI();
+                TakeDamage();
             }
             else if (collision.collider.CompareTag("Cowboy Enemies") && currentForm != 4)
             {
-                // TAKE DAMAGE
-                formHealth[currentForm - 1] -= 1; // Adjust for zero-based indexing
-                // PLAY SOUND
-                hitSound.Play();
-                // UPDATE UI FOR THAT FORM
-                UpdateHealthUI();
+                TakeDamage();
             }
         }
     }
+
+    private void TakeDamage()
+    {
+        // TAKE DAMAGE
+        formHealth[currentForm - 1] -= 1; // Adjust for zero-based indexing
+        // PLAY SOUND
+        hitSound.Play();
+        // UPDATE UI FOR THAT FORM
+        UpdateHealthUI();
+
+        // CHECK IF FORM IS DEAD
+        if(formHealth[currentForm - 1] <= 0)
+        {
+            // FORM IS DEAD
+            // DECREMENT REMAINING FORMS
+            remainingForms--;
+            // SET FORM STATUS TO DEAD
+            // formStatus[currentForm - 1] = false;
+            // Check if there are forms left
+            Debug.Log("Remaining Forms: " + remainingForms);
+            // Switch to Next Form
+            if (remainingForms > 0)
+            {
+                SwitchToNextForm();
+            }
+            else // No forms left alive game over
+            {
+                // GAME OVER
+                SceneManager.LoadScene("GameOver");
+            }
+        }
+    }
+    private void SwitchToNextForm()
+    {
+        // Start checking from the next form after the current one
+        for (int i = currentForm + 1; i <= currentForm + 4; i++)
+        {
+            int formIndex = (i - 1) % 4; // Wrap around using modulo to ensure circular behavior
+            if (formHealth[formIndex] > 0)
+            {
+                currentForm = formIndex + 1; // Set the current form to the next available one
+                UpdateHealthUI();
+                Debug.Log("Switched to Form " + currentForm);
+                // Switch to the next form sprite
+                rend.sprite = playerSkins[currentForm];
+                // Switch to the next bullet skin for the weapon
+                weaponFireScript.currentFormBullet = weaponFireScript.bulletSkins[currentForm - 1];
+                // Switch the weapon as well
+                weaponCursorScript.rend.sprite = weaponCursorScript.weaponSkins[currentForm - 1];
+
+                return;
+            }
+        }
+    }
+        
+
     private void UpdateHealthUI()
     {
         if (currentForm > 0) // Check if it's not the base form
