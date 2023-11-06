@@ -43,13 +43,13 @@
      <Compile Include="Assets/Scripts/MusicManager.cs" />
      <Compile Include="Assets/Scripts/PlayerAbilityControl.cs" />
      <Compile Include="Assets/Scripts/EnemyScript.cs" />
-     <Compile Include="Assets/Scripts/GameManager.cs" />
      <Compile Include="Assets/Scripts/WeaponCursor.cs" />
      <Compile Include="Assets/UI/ButtonClicker.cs" />
      <Compile Include="Assets/HealthHeartSystem/Scripts/HealthBarHUDTester.cs" />
      <Compile Include="Assets/Scripts/Menu.cs" />
      <Compile Include="Assets/Scripts/EnemyBulletScript.cs" />
      <Compile Include="Assets/HealthHeartSystem/Scripts/HealthBarController.cs" />
+     <Compile Include="Assets/Scripts/WaveSpawner.cs" />
      <Compile Include="Assets/Scripts/PlayerHealth.cs" />
      <Compile Include="Assets/Scripts/WeaponFireScript.cs" />
      <Compile Include="Assets/HealthHeartSystem/Scripts/PlayerStats.cs" />

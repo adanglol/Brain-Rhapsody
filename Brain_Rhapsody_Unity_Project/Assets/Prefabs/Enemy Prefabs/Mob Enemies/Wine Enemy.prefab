@@ -1,5 +1,155 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &574637962337340281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 973178943153342434}
+  - component: {fileID: 3546399659817632135}
+  m_Layer: 8
+  m_Name: Enemy Bullet Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &973178943153342434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574637962337340281}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8457984919414475751}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
+--- !u!114 &3546399659817632135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574637962337340281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 879ffb2104922e94daf8b832f85d7fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mechType: 1
+  bulletPrefab: {fileID: 5066124065102250120, guid: 8b47a4127a12d4b6ba9dd1386f404ecf, type: 3}
+  bulletsPerShot: 1
+  bulletSpeed: 3
+  bulletLife: 15
+  shotDelay: 1.5
+--- !u!1 &2730458097226020890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8910216770964403490}
+  - component: {fileID: 6963670884185090016}
+  m_Layer: 8
+  m_Name: Enemy Bullet Spawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8910216770964403490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2730458097226020890}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0.92387956, w: 0.38268343}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8457984919414475751}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 135}
+--- !u!114 &6963670884185090016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2730458097226020890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 879ffb2104922e94daf8b832f85d7fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mechType: 1
+  bulletPrefab: {fileID: 5066124065102250120, guid: 8b47a4127a12d4b6ba9dd1386f404ecf, type: 3}
+  bulletsPerShot: 1
+  bulletSpeed: 3
+  bulletLife: 15
+  shotDelay: 1.5
+--- !u!1 &2846581920968538278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1851273689012251410}
+  - component: {fileID: 4075043780702506181}
+  m_Layer: 8
+  m_Name: Enemy Bullet Spawner (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1851273689012251410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2846581920968538278}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: 0.9238796, w: -0.38268325}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8457984919414475751}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 225}
+--- !u!114 &4075043780702506181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2846581920968538278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 879ffb2104922e94daf8b832f85d7fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mechType: 1
+  bulletPrefab: {fileID: 5066124065102250120, guid: 8b47a4127a12d4b6ba9dd1386f404ecf, type: 3}
+  bulletsPerShot: 1
+  bulletSpeed: 3
+  bulletLife: 15
+  shotDelay: 1.5
 --- !u!1 &6121993819139355549
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,7 +182,11 @@ Transform:
   m_LocalPosition: {x: -9.16, y: -11.78, z: 0}
   m_LocalScale: {x: 0.47947285, y: 0.47947285, z: 0.47947285}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 973178943153342434}
+  - {fileID: 8910216770964403490}
+  - {fileID: 1851273689012251410}
+  - {fileID: 1631728835246751054}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3766373264598989129
@@ -99,14 +253,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0880f1780eb4f33b488d936e217613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mechType: 0
   enemyType: 0
-  chaseTarget: {fileID: 0}
-  enemyHealth: 0
+  chasesPlayer: 0
+  enemyHealth: 6
   enemySpeed: 0
-  bulletsPerShot: 0
-  shotDelay: 0
-  bulletPrefab: {fileID: 0}
 --- !u!50 &4589360178393887050
 Rigidbody2D:
   serializedVersion: 4
@@ -163,7 +313,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.05003202, y: -0.22410703}
@@ -179,3 +329,53 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8679092, y: 1.8519764}
   m_EdgeRadius: 0
+--- !u!1 &6675629668019098208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1631728835246751054}
+  - component: {fileID: 195503970715113143}
+  m_Layer: 8
+  m_Name: Enemy Bullet Spawner (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1631728835246751054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6675629668019098208}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: 0.3826836, w: -0.92387944}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8457984919414475751}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 315}
+--- !u!114 &195503970715113143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6675629668019098208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 879ffb2104922e94daf8b832f85d7fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mechType: 1
+  bulletPrefab: {fileID: 5066124065102250120, guid: 8b47a4127a12d4b6ba9dd1386f404ecf, type: 3}
+  bulletsPerShot: 1
+  bulletSpeed: 3
+  bulletLife: 15
+  shotDelay: 1.5
