@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3185356678829002887}
   - component: {fileID: 2708417894504470256}
   m_Layer: 7
-  m_Name: damage_sound
+  m_Name: Astro Damage Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -178,9 +178,10 @@ MonoBehaviour:
   - {fileID: 4156309923625874134, guid: 654e4ec90697ee24bb7cfb912138ec54, type: 3}
   - {fileID: 4156309923625874134, guid: d9f05ed6c5cee894da9bc28890136aca, type: 3}
   - {fileID: 2695263013704640761, guid: f8a2ff08d7817044f8cef9ffa17ca4e2, type: 3}
+  currentFormBullet: {fileID: 0}
   bulletTransform: {fileID: 3032125717097647064}
   canFire: 1
-  fireDelay: 0.2
+  fireDelay: 0.5
   astroFire: {fileID: 4066519859694751733}
   scubaFire: {fileID: 1812055737915961911}
   mobFire: {fileID: 3562372503948813737}
@@ -189,6 +190,7 @@ MonoBehaviour:
   maxChargeDamage: 10
   cowboySpreadBullets: 6
   cowboySpreadAngle: 30
+  playerHealth: {fileID: 5630172695154829205}
 --- !u!1 &2556751065306118898
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,6 +297,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1e94dd456ce8b0f408cebba754ce0943, type: 3}
   - {fileID: 21300000, guid: 216a4668d4cafe549a99cf658011501d, type: 3}
   - {fileID: 21300000, guid: 20fd1cb5d25d7b946bd1f91fddb82985, type: 3}
+  rend: {fileID: 0}
 --- !u!1 &3037416682305560551
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,7 +309,6 @@ GameObject:
   - component: {fileID: 1922114152032234755}
   - component: {fileID: 7896920719771163130}
   - component: {fileID: 2334879013568633067}
-  - component: {fileID: 966184848212159064}
   - component: {fileID: 5630172695154829205}
   - component: {fileID: 8781964409664335189}
   - component: {fileID: 2069031386198530442}
@@ -400,26 +402,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 7.5
---- !u!114 &966184848212159064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3037416682305560551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe9dd4dc4db56894491749ac0193eabe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSkins:
-  - {fileID: 21300000, guid: 66374e2dec075b74192b996fc7ef2adc, type: 3}
-  - {fileID: 21300000, guid: b0524465b35cbaa4285bc2e8a7445e02, type: 3}
-  - {fileID: 21300000, guid: b28f0352ed041c241bf98692bdaa7758, type: 3}
-  - {fileID: 21300000, guid: dc33e107d34aafb45abdb41b29877eac, type: 3}
-  - {fileID: 21300000, guid: 534ab3b0e36c51248a15ee63c36a85a0, type: 3}
-  fireRate: 0
-  power: 0
 --- !u!114 &5630172695154829205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,12 +416,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 12
   hitSound: {fileID: 2708417894504470256}
+  currentForm: 0
   healthBarContainers:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   healthUnitSprite: {fileID: 21300000, guid: fed24bd82cefc0c4a8ef64dab6231b53, type: 3}
+  playerSkins:
+  - {fileID: 21300000, guid: b0524465b35cbaa4285bc2e8a7445e02, type: 3}
+  - {fileID: 21300000, guid: b28f0352ed041c241bf98692bdaa7758, type: 3}
+  - {fileID: 21300000, guid: dc33e107d34aafb45abdb41b29877eac, type: 3}
+  - {fileID: 21300000, guid: 534ab3b0e36c51248a15ee63c36a85a0, type: 3}
+  weaponFireScript: {fileID: 3762056807682521357}
+  weaponCursorScript: {fileID: 8815597687795265466}
 --- !u!50 &8781964409664335189
 Rigidbody2D:
   serializedVersion: 4
@@ -1092,7 +1082,7 @@ Camera:
   far clip plane: 1000
   field of view: 136.8
   orthographic: 1
-  orthographic size: 6.38
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

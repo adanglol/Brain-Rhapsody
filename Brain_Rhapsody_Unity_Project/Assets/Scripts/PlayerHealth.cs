@@ -31,10 +31,6 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private Sprite[] playerSkins;
 
-    // player stats
-
-    [SerializeField] private float fireRate;
-    [SerializeField] private float power;
     private float delayTimer = 0f;
     private bool pause;
 
@@ -63,7 +59,7 @@ public class PlayerHealth : MonoBehaviour
         // Grab the sprite renderer component
         rend = GetComponent<SpriteRenderer>();
         // set default skin
-        rend.sprite = playerSkins[0];
+        rend.sprite = playerSkins[4];
 
         //SETTING THE CURRENT FORM TO 0 base form
         currentForm = 0;
@@ -138,7 +134,7 @@ public class PlayerHealth : MonoBehaviour
             if(Input.GetKeyDown("1"))
             {
                 pause = true;
-                currentForm = 1;
+                currentForm = 0;
                 Debug.Log("Switched to Form " + currentForm);
                 rend.sprite = playerSkins[currentForm];
                 // make form ICON UI transparent

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
@@ -34,11 +35,13 @@ public class WeaponFireScript : MonoBehaviour
 
     // playerhealth script reference
     public PlayerHealth playerHealth;
+
+    //private utils
+    private int currentForm;
   
-
-
-    
-
+    void Awake(){
+        currentForm = 10;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -59,7 +62,7 @@ public class WeaponFireScript : MonoBehaviour
     void Update()
     {
         // get current form from player health script
-        int currentForm = playerHealth.currentForm;
+        currentForm = playerHealth.currentForm;
         // rotate player aim cursor
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
         Vector3 aimRotation = mousePos - transform.position;
@@ -122,8 +125,6 @@ public class WeaponFireScript : MonoBehaviour
             switch(currentForm)
             {
                 case 0:
-                    break;
-                case 1:
                     // AstroNaut Form SHOOT
                     if(playerHealth.formStatus[0] == true)
                     {
@@ -131,7 +132,7 @@ public class WeaponFireScript : MonoBehaviour
                         astroFire.Play();
                     }
                     break;
-                case 2:
+                case 1:
                     // ScubaDiver Form SHOOT
                     if(playerHealth.formStatus[1] == true)
                     {
@@ -139,12 +140,14 @@ public class WeaponFireScript : MonoBehaviour
 
                     }
                     break;
-                case 4:
+                case 3:
                     // Cowboy Form SHOOT
                     if(playerHealth.formStatus[3] == true)
                     {
                         ShootCowboySpread();
                     }
+                    break;
+                case 10: //base player form is 10
                     break;
             }
         }
