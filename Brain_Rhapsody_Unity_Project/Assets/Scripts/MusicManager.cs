@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource[] musicTracks;
+    [SerializeField] public AudioSource[] musicTracks;
+
+    // Reference health script
+    public PlayerHealth playerHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -29,36 +32,38 @@ public class MusicManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("1"))
-        {
-            musicTracks[0].mute = false;
-            musicTracks[1].mute = true;
-            musicTracks[2].mute = true;
-            musicTracks[3].mute = true;
+        if(playerHealth.formStatus[0] == true){
+            if(Input.GetKeyDown("1")){
+                musicTracks[0].mute = false;
+                musicTracks[1].mute = true;
+                musicTracks[2].mute = true;
+                musicTracks[3].mute = true;
+            }
         }
-        if (Input.GetKeyDown("2"))
-        {
-
-            musicTracks[0].mute = true;
-            musicTracks[1].mute = false;
-            musicTracks[2].mute = true;
-            musicTracks[3].mute = true;
+        if(playerHealth.formStatus[1] == true){
+            if(Input.GetKeyDown("2")){
+                musicTracks[0].mute = true;
+                musicTracks[1].mute = false;
+                musicTracks[2].mute = true;
+                musicTracks[3].mute = true;
+            }
         }
-        if (Input.GetKeyDown("3"))
-        {
-            musicTracks[0].mute = true;
-            musicTracks[1].mute = true;
-            musicTracks[2].mute = false;
-            musicTracks[3].mute = true;
+        if(playerHealth.formStatus[2] == true){
+            if(Input.GetKeyDown("3")){
+                musicTracks[0].mute = true;
+                musicTracks[1].mute = true;
+                musicTracks[2].mute = false;
+                musicTracks[3].mute = true;
+            }
         }
-        if (Input.GetKeyDown("4"))
-        {
-            musicTracks[0].mute = true;
-            musicTracks[1].mute = true;
-            musicTracks[2].mute = true;
-            musicTracks[3].mute = false;
+        if(playerHealth.formStatus[3] == true){
+            if(Input.GetKeyDown("4")){
+                musicTracks[0].mute = true;
+                musicTracks[1].mute = true;
+                musicTracks[2].mute = true;
+                musicTracks[3].mute = false;
+            }
         }
-
         pauseCheck();
 
     }

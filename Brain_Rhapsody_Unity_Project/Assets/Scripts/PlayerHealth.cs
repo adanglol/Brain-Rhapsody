@@ -18,7 +18,7 @@ public class PlayerHealth : MonoBehaviour
     // Refer to keep track of how many forms are still alive
     private int remainingForms;
     // Array keep track of status of each form (alive or dead)
-    private bool[] formStatus;
+    public bool[] formStatus;
 
     // Reference to the player's health bar for UI for each form
     public RectTransform[] healthBarContainers;
@@ -43,6 +43,19 @@ public class PlayerHealth : MonoBehaviour
 
     // Referene to weapon cursor script
     public WeaponCursor weaponCursorScript;
+
+    // Refer to music manager script
+    public MusicManager musicManagerScript;
+
+    // Refer to form icon UI
+    public RectTransform[] formIcons;
+
+    // Reference to sprites we want to use for the form icons
+    public List<Sprite> formIconSprites;
+
+    // refer to enemy script
+    public EnemyScript enemyScript;
+
   
     void Start()
     {
@@ -99,38 +112,174 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Grabbing the text component from Each form icon
+        RectTransform firstFormIcon = formIcons[0];
+        Text[] texts = firstFormIcon.GetComponentsInChildren<Text>();
 
-        if(Input.GetKeyDown("1"))
-        {
+        RectTransform secondFormIcon = formIcons[1];
+        Text[] texts2 = secondFormIcon.GetComponentsInChildren<Text>();
+
+        RectTransform thirdFormIcon = formIcons[2];
+        Text[] texts3 = thirdFormIcon.GetComponentsInChildren<Text>();
+
+        RectTransform fourthFormIcon = formIcons[3];
+        Text[] texts4 = fourthFormIcon.GetComponentsInChildren<Text>();
+
+        // Grabbing the Image component from each form icon
+        Image images = firstFormIcon.GetComponent<Image>();
+
+        Image images2 = secondFormIcon.GetComponent<Image>();
+
+        Image images3 = thirdFormIcon.GetComponent<Image>();
+
+        Image images4 = fourthFormIcon.GetComponent<Image>();
+
+        if(formStatus[0] == true){
+            if(Input.GetKeyDown("1"))
+            {
                 pause = true;
                 currentForm = 1;
                 Debug.Log("Switched to Form " + currentForm);
                 rend.sprite = playerSkins[currentForm];
+                // make form ICON UI transparent
+                // Make the entire RectTransform (including Image and nested Text) transparent
+                foreach (var text in texts)
+                {
+                    Color iconTextColor = text.color;
+                    iconTextColor.a = 0f; // Set the alpha (transparency) to zero
+                    text.color = iconTextColor;
+                }
+                 foreach (var text in texts2)
+                {
+                    Color iconTextColor = text.color;
+                    iconTextColor.a = 1f; // Set the alpha (transparency) to zero
+                    text.color = iconTextColor;
+                }
+                foreach (var text in texts3)
+                {
+                    Color iconTextColor = text.color;
+                    iconTextColor.a = 1f; // Set the alpha (transparency) to zero
+                    text.color = iconTextColor;
+                }
+                foreach (var text in texts4)
+                {
+                    Color iconTextColor = text.color;
+                    iconTextColor.a = 1f; // Set the alpha (transparency) to zero
+                    text.color = iconTextColor;
+                }
+
+                // images.sprite = formIconSprites[0];
+                // Change the sprite of the Image component
+                // images.sprite = formIconSprites[3];
+                // images2.sprite = formIconSprites[1];
+                // images3.sprite = formIconSprites[2];
+                // images4.sprite = formIconSprites[3];
+               
+            }
+        }
+        if(formStatus[1] == true){
+            if(Input.GetKeyDown("2"))
+            {
+                    pause = true;
+                    currentForm = 2;
+                    Debug.Log("Switched to Form " + currentForm);
+                    rend.sprite = playerSkins[currentForm];
+                    
+                    foreach (var text in texts2)
+                    {
+                        Color iconTextColor = text.color;
+                        iconTextColor.a = 0f; // Set the alpha (transparency) to zero
+                        text.color = iconTextColor;
+                    }
+
+                    foreach (var text in texts)
+                    {
+                        Color iconTextColor = text.color;
+                        iconTextColor.a = 1f; // Set the alpha (transparency) to zero
+                        text.color = iconTextColor;
+                    }
+                    foreach (var text in texts3)
+                    {
+                        Color iconTextColor = text.color;
+                        iconTextColor.a = 1f; // Set the alpha (transparency) to zero
+                        text.color = iconTextColor;
+                    }
+                    foreach (var text in texts4)
+                    {
+                        Color iconTextColor = text.color;
+                        iconTextColor.a = 1f; // Set the alpha (transparency) to zero
+                        text.color = iconTextColor;
+                    }
+            }
         }
 
-        if (Input.GetKeyDown("2"))
-        {
-                pause = true;
-                currentForm = 2;
-                Debug.Log("Switched to Form " + currentForm);
-                rend.sprite = playerSkins[currentForm];
+        if(formStatus[2] == true){
+            if(Input.GetKeyDown("3"))
+            {
+                    pause = true;
+                    currentForm = 3;
+                    Debug.Log("Switched to Form " + currentForm);
+                    rend.sprite = playerSkins[currentForm];
+                    foreach (var text in texts3)
+                    {
+                        Color iconTextColor = text.color;
+                        iconTextColor.a = 0f; // Set the alpha (transparency) to zero
+                        text.color = iconTextColor;
+                    }
+                    foreach (var text in texts)
+                    {
+                        Color iconTextColor = text.color;
+                        iconTextColor.a = 1f; // Set the alpha (transparency) to zero
+                        text.color = iconTextColor;
+                    }
+                    foreach (var text in texts2)
+                    {
+                        Color iconTextColor = text.color;
+                        iconTextColor.a = 1f; // Set the alpha (transparency) to zero
+                        text.color = iconTextColor;
+                    }
+                    foreach (var text in texts4)
+                    {
+                        Color iconTextColor = text.color;
+                        iconTextColor.a = 1f; // Set the alpha (transparency) to zero
+                        text.color = iconTextColor;
+                    }
+            }
         }
-
-        if (Input.GetKeyDown("3"))
-        {
-                pause = true;
-                currentForm = 3;
-                Debug.Log("Switched to Form " + currentForm);
-                rend.sprite = playerSkins[currentForm];
+        if(formStatus[3] == true){
+            if(Input.GetKeyDown("4"))
+            {
+                    pause = true;
+                    currentForm = 4;
+                    Debug.Log("Switched to Form " + currentForm);
+                    rend.sprite = playerSkins[currentForm];
+                    foreach (var text in texts4)
+                    {
+                        Color iconTextColor = text.color;
+                        iconTextColor.a = 0f; // Set the alpha (transparency) to zero
+                        text.color = iconTextColor;
+                    }
+                    foreach (var text in texts)
+                    {
+                        Color iconTextColor = text.color;
+                        iconTextColor.a = 1f; // Set the alpha (transparency) to zero
+                        text.color = iconTextColor;
+                    }
+                    foreach (var text in texts2)
+                    {
+                        Color iconTextColor = text.color;
+                        iconTextColor.a = 1f; // Set the alpha (transparency) to zero
+                        text.color = iconTextColor;
+                    }
+                    foreach (var text in texts3)
+                    {
+                        Color iconTextColor = text.color;
+                        iconTextColor.a = 1f; // Set the alpha (transparency) to zero
+                        text.color = iconTextColor;
+                    }
+            }
         }
-
-        if (Input.GetKeyDown("4"))
-        {
-                pause = true;
-                currentForm = 4;
-                Debug.Log("Switched to Form " + currentForm);
-                rend.sprite = playerSkins[currentForm];
-        }
+    
         if (pause)
         {
             Time.timeScale = 0;
@@ -209,6 +358,7 @@ public class PlayerHealth : MonoBehaviour
             }
         }
     }
+    // When the player gets hit by bullet
 
     private void TakeDamage()
     {
@@ -218,17 +368,27 @@ public class PlayerHealth : MonoBehaviour
         hitSound.Play();
         // UPDATE UI FOR THAT FORM
         UpdateHealthUI();
-
         // CHECK IF FORM IS DEAD
         if(formHealth[currentForm - 1] <= 0)
         {
             // FORM IS DEAD
             // DECREMENT REMAINING FORMS
             remainingForms--;
-            // SET FORM STATUS TO DEAD
-            // formStatus[currentForm - 1] = false;
-            // Check if there are forms left
             Debug.Log("Remaining Forms: " + remainingForms);
+            // SET FORM STATUS TO DEAD
+            formStatus[currentForm - 1] = false;
+            // musicManagerScript.musicTracks[currentForm - 1].mute = false;
+           
+            for(int i = 0; i < 4; i++)
+            {
+                if(formStatus[currentForm - 1] == true)
+                {
+                    // THERE ARE STILL FORMS ALIVE
+                    return;
+                }
+            }
+            // Remove the form icon from the UI
+            formIcons[currentForm - 1].gameObject.SetActive(false);
             // Switch to Next Form
             if (remainingForms > 0)
             {
@@ -256,9 +416,9 @@ public class PlayerHealth : MonoBehaviour
                 rend.sprite = playerSkins[currentForm];
                 // Switch to the next bullet skin for the weapon
                 weaponFireScript.currentFormBullet = weaponFireScript.bulletSkins[currentForm - 1];
-                // Switch the weapon as well
+                // // Switch the weapon as well
                 weaponCursorScript.rend.sprite = weaponCursorScript.weaponSkins[currentForm - 1];
-
+                
                 return;
             }
         }

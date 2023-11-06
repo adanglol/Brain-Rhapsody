@@ -58,10 +58,9 @@ public class WeaponFireScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // get current form from player health script
         int currentForm = playerHealth.currentForm;
-        Debug.Log("Player Form: aaa" + "" + currentForm);
         // rotate player aim cursor
-
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
         Vector3 aimRotation = mousePos - transform.position;
         float zRotation = Mathf.Atan2(aimRotation.y, aimRotation.x) * Mathf.Rad2Deg;
@@ -69,29 +68,41 @@ public class WeaponFireScript : MonoBehaviour
 
         //check for form switch, switch player bullet to fire to use
         // AstroNaut form
-        if (Input.GetKeyDown("1"))
+        if(playerHealth.formStatus[0] == true)
         {
-            Debug.Log("AstroNaut Form");
-            currentFormBullet = bulletSkins[0];
+            if (Input.GetKeyDown("1"))
+            {
+                Debug.Log("AstroNaut Form");
+                currentFormBullet = bulletSkins[0];
+            }
         }
         // ScubaDiver form
-        if (Input.GetKeyDown("2"))
+        if(playerHealth.formStatus[1] == true)
         {
-            Debug.Log("ScubaDiver Form");
-            currentFormBullet = bulletSkins[1];
+            if (Input.GetKeyDown("2"))
+            {
+                Debug.Log("ScubaDiver Form");
+                currentFormBullet = bulletSkins[1];
+            }
         }
         // Mob Boss Form
-        if (Input.GetKeyDown("3"))
+        if(playerHealth.formStatus[2] == true)
         {
-            Debug.Log("Mob Boss Form");
-            currentFormBullet = bulletSkins[2];
+            if (Input.GetKeyDown("3"))
+            {
+                Debug.Log("Mob Boss Form");
+                currentFormBullet = bulletSkins[2];
+            }
         }
         // Cowboy Form
-        if (Input.GetKeyDown("4"))
+        if(playerHealth.formStatus[3] == true)
         {
-            Debug.Log("Cowboy Form");
-            currentFormBullet = bulletSkins[3];
-            // cowboyBulletSpread = currentFormBullet.GetComponent<CowboyBulletSpread>(); // Get the CowboyBulletSpread component for Cowboy Form
+            if (Input.GetKeyDown("4"))
+            {
+                Debug.Log("Cowboy Form");
+                currentFormBullet = bulletSkins[3];
+                // cowboyBulletSpread = currentFormBullet.GetComponent<CowboyBulletSpread>(); // Get the CowboyBulletSpread component for Cowboy Form
+            }
         }
 
         // check if bullet has not been fired, advance timer
@@ -114,26 +125,37 @@ public class WeaponFireScript : MonoBehaviour
                     break;
                 case 1:
                     // AstroNaut Form SHOOT
-                    Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
-                    astroFire.Play();
+                    if(playerHealth.formStatus[0] == true)
+                    {
+                        Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
+                        astroFire.Play();
+                    }
                     break;
                 case 2:
                     // ScubaDiver Form SHOOT
-                    StartCoroutine(ScubaBurstFire());
+                    if(playerHealth.formStatus[1] == true)
+                    {
+                        StartCoroutine(ScubaBurstFire());
+
+                    }
                     break;
                 case 4:
                     // Cowboy Form SHOOT
-                    ShootCowboySpread();
+                    if(playerHealth.formStatus[3] == true)
+                    {
+                        ShootCowboySpread();
+                    }
                     break;
             }
         }
-
-        if (Input.GetMouseButton(0)){ // Mob Boss Fire Weapon
-            if(currentFormBullet == bulletSkins[2] && canFire && currentForm == 3)
-            {
-                Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
+        if(playerHealth.formStatus[2] == true){
+            if (Input.GetMouseButton(0))
+            { // Mob Boss Fire Weapon
+                if(currentFormBullet == bulletSkins[2] && canFire && currentForm == 3)
+                {
+                    Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
+                }
             }
-
         }
 
          if (isCharging)

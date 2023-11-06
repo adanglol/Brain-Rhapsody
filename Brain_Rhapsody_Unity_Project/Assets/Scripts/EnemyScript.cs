@@ -25,6 +25,12 @@ public class EnemyScript : MonoBehaviour
     [Header("Enemy Assets")]
     //[SerializeField] private AudioSource enemyDeathSound;
 
+    // reference score
+    public Score score;
+
+
+
+
 
     //private utility variables
     private Rigidbody2D rb;
@@ -120,5 +126,6 @@ public class EnemyScript : MonoBehaviour
         //enemyDeathSound.Play();
         yield return new WaitForSeconds(1.0f);
         Destroy(this.gameObject);
+        score.IncrementScore(1);
     }
 }
