@@ -5,8 +5,8 @@ using UnityEngine;
 public class WeaponCursor : MonoBehaviour
 {
 
-    [SerializeField] private Sprite[] weaponSkins;
-    private SpriteRenderer rend;
+    [SerializeField] public Sprite[] weaponSkins;
+    public SpriteRenderer rend;
 
     // Start is called before the first frame update
     void Start()

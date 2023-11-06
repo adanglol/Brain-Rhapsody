@@ -613,7 +613,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &831319182
@@ -1725,7 +1725,8 @@ PrefabInstance:
       propertyPath: healthBarContainers.Array.data[3]
       value: 
       objectReference: {fileID: 861657232}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 966184848212159064, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

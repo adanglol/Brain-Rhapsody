@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class WeaponFireScript : MonoBehaviour
 {
-    [SerializeField] private GameObject[] bulletSkins;
+    [SerializeField] public GameObject[] bulletSkins;
 
     private float timer;
-    private GameObject currentFormBullet;
+    [SerializeField]public GameObject currentFormBullet;
     [SerializeField] private Transform bulletTransform;
     [SerializeField] private bool canFire;
     [SerializeField] private float fireDelay;
@@ -32,12 +32,18 @@ public class WeaponFireScript : MonoBehaviour
     [SerializeField] private int cowboySpreadBullets = 6;
     [SerializeField] private float cowboySpreadAngle = 60f;
 
+    // playerhealth script reference
+    public PlayerHealth playerHealth;
+  
+
+
     
 
 
     // Start is called before the first frame update
     void Start()
     {
+        // hide cursor
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
 
@@ -52,6 +58,8 @@ public class WeaponFireScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int currentForm = playerHealth.currentForm;
+        Debug.Log("Player Form: aaa" + "" + currentForm);
         // rotate player aim cursor
 
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
@@ -100,30 +108,28 @@ public class WeaponFireScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && canFire)
         {
             canFire = false;
-            if (currentFormBullet == bulletSkins[0]) //Astronaut fire weapon
+            switch(currentForm)
             {
-                Debug.Log("Astronaut Form");
-                //isCharging = true;
-                Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
-                astroFire.Play();
-
-            }
-            
-
-            else if (currentFormBullet == bulletSkins[1]) //Scuba Fire Weapon
-            {
-                // ScubaDiver Form
-                StartCoroutine(ScubaBurstFire());
-            }
-            else if (currentFormBullet == bulletSkins[3]) // Cowboy Fire Weapon
-            {
-                // Cowboy Form
-                ShootCowboySpread();
+                case 0:
+                    break;
+                case 1:
+                    // AstroNaut Form SHOOT
+                    Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
+                    astroFire.Play();
+                    break;
+                case 2:
+                    // ScubaDiver Form SHOOT
+                    StartCoroutine(ScubaBurstFire());
+                    break;
+                case 4:
+                    // Cowboy Form SHOOT
+                    ShootCowboySpread();
+                    break;
             }
         }
 
         if (Input.GetMouseButton(0)){ // Mob Boss Fire Weapon
-            if(currentFormBullet == bulletSkins[2])
+            if(currentFormBullet == bulletSkins[2] && canFire && currentForm == 3)
             {
                 Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
             }
