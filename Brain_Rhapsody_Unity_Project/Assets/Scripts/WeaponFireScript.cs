@@ -130,10 +130,10 @@ public class WeaponFireScript : MonoBehaviour
             if(currentFormBullet == bulletSkins[2])
             {
                 Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
+                mobFire.Play();
             }
 
         }
-
          if (isCharging)
         {
             chargeTime += Time.deltaTime;
@@ -149,13 +149,7 @@ public class WeaponFireScript : MonoBehaviour
                 isCharging = false;
 
             }
-        }
-        
-
-   
-
-      
-       
+        }     
     }
 
     // Method to fire a charged bullet
@@ -246,7 +240,6 @@ public class WeaponFireScript : MonoBehaviour
             shotsFired++;
             yield return new WaitForSeconds(0.2f);
         } 
-
     }
 
    
