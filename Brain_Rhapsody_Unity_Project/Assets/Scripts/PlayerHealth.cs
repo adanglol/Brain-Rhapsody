@@ -30,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
     private SpriteRenderer rend;
 
     [SerializeField] private Sprite[] playerSkins;
+    [SerializeField] private AudioSource[] playerDeathSounds;
 
     private float delayTimer = 0f;
     private bool pause;
@@ -73,7 +74,8 @@ public class PlayerHealth : MonoBehaviour
         formStatus = new bool[4];
         for(int i = 0; i < 4; i++)
         {
-            formHealth[i] = maxHealth / 4; // Each form has 1/4 of the max health
+            //formHealth[i] = maxHealth / 4; // Each form has 1/4 of the max health
+            formHealth[i] = 6; // Each form has 1/4 of the max health
             formStatus[i] = true; // Alive
         }
         // Loop through each form's health container astro - cowboy
@@ -84,7 +86,7 @@ public class PlayerHealth : MonoBehaviour
             // Calculate the size of each health unit based on the container's size and maxHealth
             float unitWidth = container.rect.width / maxHealth;
             float unitHeight = container.rect.height;
-            for (int j = 0; j < maxHealth/4; j++)
+            for (int j = 0; j < 6; j++)
             {
                 //  Create a new game object for each health unit
                 GameObject healthUnit = new GameObject("HealthUnitImage" + j);
@@ -415,6 +417,8 @@ public class PlayerHealth : MonoBehaviour
         if(formHealth[currentForm - 1] <= 0)
         {
             // FORM IS DEAD
+            //PLAY DEATH SOUND
+            playerDeathSounds[currentForm-1].Play();
             // DECREMENT REMAINING FORMS
             remainingForms--;
             Debug.Log("Remaining Forms: " + remainingForms);
@@ -476,7 +480,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentForm > 0) // Check if it's not the base form
         {
             int currentHealth = formHealth[currentForm - 1]; // Adjust for zero-based indexing
-            int maxHealthUnits = maxHealth / 4;
+            int maxHealthUnits = 6;
             int currentHealthUnits = Mathf.Clamp(currentHealth, 0, maxHealthUnits);
 
             RectTransform currentHealthContainer = healthBarContainers[currentForm - 1];

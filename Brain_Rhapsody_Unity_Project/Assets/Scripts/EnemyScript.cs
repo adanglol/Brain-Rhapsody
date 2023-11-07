@@ -23,7 +23,7 @@ public class EnemyScript : MonoBehaviour
     
     //Assign the corresponding prefabs for the individual enemy in inspector
     [Header("Enemy Assets")]
-    //[SerializeField] private AudioSource enemyDeathSound;
+    [SerializeField] private AudioSource enemyDeathSound;
 
     // reference score
     private GameObject score;
@@ -56,6 +56,7 @@ public class EnemyScript : MonoBehaviour
         //check health every frame
         if(enemyHealth == 0){
             isDead = true;
+            enemyDeathSound.Play();
             StartCoroutine(enemyDeath());
         }
         if (chasesPlayer)
@@ -121,7 +122,6 @@ public class EnemyScript : MonoBehaviour
 
     IEnumerator enemyDeath(){
         enemySprite.color = Color.black;
-        //enemyDeathSound.Play();
         yield return new WaitForSeconds(1.0f);
         Destroy(this.gameObject);
         score.GetComponent<Score>().IncrementScore(1);
