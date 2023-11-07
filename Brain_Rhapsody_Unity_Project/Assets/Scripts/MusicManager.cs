@@ -5,9 +5,12 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour
 {
     [SerializeField] public AudioSource[] musicTracks;
+    
+    private int currentTrack;
 
     // Reference health script
     public PlayerHealth playerHealth;
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +37,8 @@ public class MusicManager : MonoBehaviour
     {
         if(playerHealth.formStatus[0] == true){
             if(Input.GetKeyDown("1")){
+                currentTrack = 0;
+                musicTracks[0].volume -= 1;
                 musicTracks[0].mute = false;
                 musicTracks[1].mute = true;
                 musicTracks[2].mute = true;
@@ -42,6 +47,8 @@ public class MusicManager : MonoBehaviour
         }
         if(playerHealth.formStatus[1] == true){
             if(Input.GetKeyDown("2")){
+                currentTrack = 1;
+                musicTracks[1].volume -= 1;
                 musicTracks[0].mute = true;
                 musicTracks[1].mute = false;
                 musicTracks[2].mute = true;
@@ -50,6 +57,8 @@ public class MusicManager : MonoBehaviour
         }
         if(playerHealth.formStatus[2] == true){
             if(Input.GetKeyDown("3")){
+                currentTrack = 2;
+                musicTracks[2].volume -= 1;
                 musicTracks[0].mute = true;
                 musicTracks[1].mute = true;
                 musicTracks[2].mute = false;
@@ -58,6 +67,8 @@ public class MusicManager : MonoBehaviour
         }
         if(playerHealth.formStatus[3] == true){
             if(Input.GetKeyDown("4")){
+                currentTrack = 3;
+                musicTracks[3].volume -= 1;
                 musicTracks[0].mute = true;
                 musicTracks[1].mute = true;
                 musicTracks[2].mute = true;
@@ -66,6 +77,10 @@ public class MusicManager : MonoBehaviour
         }
         pauseCheck();
 
+    }
+    void FixedUpdate()
+    {
+        fadeIn();
     }
 
     void pauseCheck()
@@ -85,5 +100,13 @@ public class MusicManager : MonoBehaviour
             musicTracks[3].UnPause();
         }
     }
+    void fadeIn()
+    {
+        if (musicTracks[currentTrack].volume < 1)
+        {
+            musicTracks[currentTrack].volume += 0.07f;
+        }
+    }
+
 
 }

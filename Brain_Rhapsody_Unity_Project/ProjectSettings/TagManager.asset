@@ -51,6 +51,9 @@ TagManager:
   - name: Background
     uniqueID: 1424785273
     locked: 0
+  - name: Walls
+    uniqueID: 3801220031
+    locked: 0
   - name: Enemies
     uniqueID: 2230955467
     locked: 0
