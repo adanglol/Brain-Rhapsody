@@ -44,12 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 879ffb2104922e94daf8b832f85d7fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mechType: 0
+  mechType: 1
   bulletPrefab: {fileID: 5066124065102250120, guid: fb5321a81769746aa8f4049768700842, type: 3}
   bulletsPerShot: 1
-  bulletSpeed: 5
+  bulletSpeed: 4
   bulletLife: 15
-  shotDelay: 1
+  shotDelay: 1.25
 --- !u!1 &3428028048796591209
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 879ffb2104922e94daf8b832f85d7fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mechType: 0
+  mechType: 1
   bulletPrefab: {fileID: 5066124065102250120, guid: fb5321a81769746aa8f4049768700842, type: 3}
   bulletsPerShot: 1
   bulletSpeed: 5
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 879ffb2104922e94daf8b832f85d7fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mechType: 0
+  mechType: 1
   bulletPrefab: {fileID: 5066124065102250120, guid: fb5321a81769746aa8f4049768700842, type: 3}
   bulletsPerShot: 1
   bulletSpeed: 5
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 879ffb2104922e94daf8b832f85d7fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mechType: 0
+  mechType: 1
   bulletPrefab: {fileID: 5066124065102250120, guid: fb5321a81769746aa8f4049768700842, type: 3}
   bulletsPerShot: 1
   bulletSpeed: 5
@@ -231,7 +231,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.16, y: -11.78, z: 0}
-  m_LocalScale: {x: 0.47947285, y: 0.47947285, z: 0.47947285}
+  m_LocalScale: {x: 1.0939653, y: 1.0939653, z: 1.0939653}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2297805070761575392}
@@ -372,18 +372,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.017549813, y: 0.1088357}
+  m_Offset: {x: 0.007976413, y: -0.03476447}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 3.2, y: 3.2}
     newSize: {x: 19.2, y: 19.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.452589, y: 3.8496313}
+  m_Size: {x: 1.6101356, y: 2.7774177}
   m_EdgeRadius: 0
 --- !u!82 &-7327301311690762733
 AudioSource:
@@ -525,7 +525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 879ffb2104922e94daf8b832f85d7fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mechType: 0
+  mechType: 1
   bulletPrefab: {fileID: 5066124065102250120, guid: fb5321a81769746aa8f4049768700842, type: 3}
   bulletsPerShot: 1
   bulletSpeed: 5
@@ -575,7 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 879ffb2104922e94daf8b832f85d7fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mechType: 0
+  mechType: 1
   bulletPrefab: {fileID: 5066124065102250120, guid: fb5321a81769746aa8f4049768700842, type: 3}
   bulletsPerShot: 1
   bulletSpeed: 5
@@ -625,7 +625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 879ffb2104922e94daf8b832f85d7fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mechType: 0
+  mechType: 1
   bulletPrefab: {fileID: 5066124065102250120, guid: fb5321a81769746aa8f4049768700842, type: 3}
   bulletsPerShot: 1
   bulletSpeed: 5
@@ -675,7 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 879ffb2104922e94daf8b832f85d7fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mechType: 0
+  mechType: 1
   bulletPrefab: {fileID: 5066124065102250120, guid: fb5321a81769746aa8f4049768700842, type: 3}
   bulletsPerShot: 1
   bulletSpeed: 5

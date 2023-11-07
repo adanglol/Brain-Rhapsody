@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.15, y: 2.91, z: 0}
-  m_LocalScale: {x: 0.60843253, y: 0.60843253, z: 0.60843253}
+  m_LocalScale: {x: 1.2804507, y: 1.2804507, z: 1.2804507}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2398781610949416140}
@@ -149,18 +149,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.016241968}
+  m_Offset: {x: -0.0050831437, y: -0.024420261}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 3.2, y: 3.2}
     newSize: {x: 19.2, y: 19.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.12, y: 3.8207126}
+  m_Size: {x: 3.1783657, y: 2.0722256}
   m_EdgeRadius: 0
 --- !u!114 &6216459291971092334
 MonoBehaviour:
@@ -175,9 +175,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 0
-  chasesPlayer: 0
-  enemyHealth: 5
-  enemySpeed: 6.5
+  chasesPlayer: 1
+  enemyHealth: 15
+  enemySpeed: 0.5
   enemyDeathSound: {fileID: 4935597780435177038}
 --- !u!82 &4935597780435177038
 AudioSource:
@@ -293,11 +293,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6648335569987174155, guid: fcc229a8e6ff7954d8a1de00837d6747, type: 3}
       propertyPath: shotDelay
-      value: 0.07
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6648335569987174155, guid: fcc229a8e6ff7954d8a1de00837d6747, type: 3}
       propertyPath: bulletSpeed
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6648335569987174155, guid: fcc229a8e6ff7954d8a1de00837d6747, type: 3}
       propertyPath: bulletPrefab
@@ -383,11 +383,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6648335569987174155, guid: fcc229a8e6ff7954d8a1de00837d6747, type: 3}
       propertyPath: shotDelay
-      value: 0.07
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6648335569987174155, guid: fcc229a8e6ff7954d8a1de00837d6747, type: 3}
       propertyPath: bulletSpeed
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6648335569987174155, guid: fcc229a8e6ff7954d8a1de00837d6747, type: 3}
       propertyPath: bulletPrefab

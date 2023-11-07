@@ -47,9 +47,9 @@ MonoBehaviour:
   mechType: 0
   bulletPrefab: {fileID: 5066124065102250120, guid: a1b4b21248edb42dc92562bf65b75218, type: 3}
   bulletsPerShot: 1
-  bulletSpeed: 5
-  bulletLife: 15
-  shotDelay: 1
+  bulletSpeed: 3
+  bulletLife: 10
+  shotDelay: 1.25
 --- !u!1 &1820981618152339180
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,7 +81,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.16, y: -11.78, z: 0}
-  m_LocalScale: {x: 0.47947285, y: 0.47947285, z: 0.47947285}
+  m_LocalScale: {x: 0.9186633, y: 0.9186633, z: 0.9186633}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 439797007317438730}
@@ -205,7 +205,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05003202, y: -0.073658586}
+  m_Offset: {x: 0.07674253, y: -0.0424968}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -216,7 +216,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8679092, y: 2.3935935}
+  m_Size: {x: 1.3871257, y: 2.33127}
   m_EdgeRadius: 0
 --- !u!114 &51680166391669124
 MonoBehaviour:
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: 3
   chasesPlayer: 0
-  enemyHealth: 5
+  enemyHealth: 15
   enemySpeed: 4
   enemyDeathSound: {fileID: -6374578593145564270}
 --- !u!82 &-6374578593145564270
@@ -378,9 +378,9 @@ MonoBehaviour:
   mechType: 0
   bulletPrefab: {fileID: 5066124065102250120, guid: a1b4b21248edb42dc92562bf65b75218, type: 3}
   bulletsPerShot: 1
-  bulletSpeed: 5
-  bulletLife: 15
-  shotDelay: 1
+  bulletSpeed: 3
+  bulletLife: 10
+  shotDelay: 1.25
 --- !u!1 &2765172674971248056
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,9 +428,9 @@ MonoBehaviour:
   mechType: 0
   bulletPrefab: {fileID: 5066124065102250120, guid: a1b4b21248edb42dc92562bf65b75218, type: 3}
   bulletsPerShot: 1
-  bulletSpeed: 5
-  bulletLife: 15
-  shotDelay: 1
+  bulletSpeed: 3
+  bulletLife: 10
+  shotDelay: 1.25
 --- !u!1 &2787747017353136194
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,9 +478,9 @@ MonoBehaviour:
   mechType: 0
   bulletPrefab: {fileID: 5066124065102250120, guid: a1b4b21248edb42dc92562bf65b75218, type: 3}
   bulletsPerShot: 1
-  bulletSpeed: 5
-  bulletLife: 15
-  shotDelay: 1
+  bulletSpeed: 3
+  bulletLife: 10
+  shotDelay: 1.25
 --- !u!1 &3487770583277088344
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,9 +528,9 @@ MonoBehaviour:
   mechType: 0
   bulletPrefab: {fileID: 5066124065102250120, guid: a1b4b21248edb42dc92562bf65b75218, type: 3}
   bulletsPerShot: 1
-  bulletSpeed: 5
-  bulletLife: 15
-  shotDelay: 1
+  bulletSpeed: 3
+  bulletLife: 10
+  shotDelay: 1.25
 --- !u!1 &3750219423952053960
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,9 +578,9 @@ MonoBehaviour:
   mechType: 0
   bulletPrefab: {fileID: 5066124065102250120, guid: a1b4b21248edb42dc92562bf65b75218, type: 3}
   bulletsPerShot: 1
-  bulletSpeed: 5
-  bulletLife: 15
-  shotDelay: 1
+  bulletSpeed: 3
+  bulletLife: 10
+  shotDelay: 1.25
 --- !u!1 &5604731544512321595
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,9 +628,9 @@ MonoBehaviour:
   mechType: 0
   bulletPrefab: {fileID: 5066124065102250120, guid: a1b4b21248edb42dc92562bf65b75218, type: 3}
   bulletsPerShot: 1
-  bulletSpeed: 5
-  bulletLife: 15
-  shotDelay: 1
+  bulletSpeed: 3
+  bulletLife: 10
+  shotDelay: 1.25
 --- !u!1 &6429495055932597233
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +678,6 @@ MonoBehaviour:
   mechType: 0
   bulletPrefab: {fileID: 5066124065102250120, guid: a1b4b21248edb42dc92562bf65b75218, type: 3}
   bulletsPerShot: 1
-  bulletSpeed: 5
-  bulletLife: 15
-  shotDelay: 1
+  bulletSpeed: 3
+  bulletLife: 10
+  shotDelay: 1.25

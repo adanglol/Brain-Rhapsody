@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.35, y: -4.83, z: 0}
-  m_LocalScale: {x: 0.5938016, y: 0.5938016, z: 0.5938016}
+  m_LocalScale: {x: 0.89824367, y: 0.89824367, z: 0.89824367}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3392182655624221429}
@@ -149,7 +149,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05003202, y: -0.22410703}
+  m_Offset: {x: 0.005768895, y: -0.024922848}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -160,7 +160,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8679092, y: 1.8519764}
+  m_Size: {x: 2.2515228, y: 2.2503448}
   m_EdgeRadius: 0
 --- !u!114 &2957294159295133897
 MonoBehaviour:
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: 1
   chasesPlayer: 0
-  enemyHealth: 18
+  enemyHealth: 30
   enemySpeed: 0
   enemyDeathSound: {fileID: -7336471630890173624}
 --- !u!82 &-7336471630890173624

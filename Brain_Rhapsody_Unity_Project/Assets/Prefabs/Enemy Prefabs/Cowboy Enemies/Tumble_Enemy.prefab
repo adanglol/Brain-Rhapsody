@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.16, y: -11.78, z: 0}
-  m_LocalScale: {x: 0.47947285, y: 0.47947285, z: 0.47947285}
+  m_LocalScale: {x: 0.8015827, y: 0.8015827, z: 0.8015827}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: 3
   chasesPlayer: 1
-  enemyHealth: 25
+  enemyHealth: 10
   enemySpeed: 5
   enemyDeathSound: {fileID: -1181219695598049311}
 --- !u!50 &4011829923584238994

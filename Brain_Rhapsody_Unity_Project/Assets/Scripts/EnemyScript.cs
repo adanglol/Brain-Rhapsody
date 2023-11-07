@@ -35,12 +35,29 @@ public class EnemyScript : MonoBehaviour
     private SpriteRenderer enemySprite;
     private bool isDead;
     private GameObject chaseTarget;
+    private GameObject enemyDeathSoundTest;
 
 
     void Awake()
     {
-        score = GameObject.FindWithTag("Score");
+        if (enemyType == EnemyType.Astro)
+        {
+            enemyDeathSoundTest = GameObject.FindWithTag("Astro Enemy Sound");
+        }
+        else if (enemyType == EnemyType.Scuba)
+        {
+            enemyDeathSoundTest = GameObject.FindWithTag("Scuba Enemy Sound");
+        }
+        else if (enemyType == EnemyType.MobBoss)
+        {
+            enemyDeathSoundTest = GameObject.FindWithTag("Mob Enemy Sound");
+        }
+        else if (enemyType == EnemyType.Cowboy)
+        {
+            enemyDeathSoundTest = GameObject.FindWithTag("Cowboy Enemy Sound");
+        }
         
+        score = GameObject.FindWithTag("Score");
         chaseTarget = GameObject.FindWithTag("Player");
     }
     // Start is called before the first frame update
@@ -56,7 +73,6 @@ public class EnemyScript : MonoBehaviour
         //check health every frame
         if(enemyHealth <= 0){
             isDead = true;
-            enemyDeathSound.Play();
             StartCoroutine(enemyDeath());
         }
         if (chasesPlayer)
@@ -122,7 +138,8 @@ public class EnemyScript : MonoBehaviour
 
     IEnumerator enemyDeath(){
         enemySprite.color = Color.black;
-        yield return new WaitForSeconds(1.0f);
+        enemyDeathSoundTest.GetComponent<AudioSource>().Play();
+        yield return new WaitForSeconds(2.0f);
         score.GetComponent<Score>().IncrementScore(1);
         Destroy(this.gameObject);
     }

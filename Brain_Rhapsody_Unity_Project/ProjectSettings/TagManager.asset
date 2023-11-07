@@ -19,6 +19,11 @@ TagManager:
   - Mob Enemy Bullet
   - Astro Enemy Bullet
   - Score
+  - Enemy Sound
+  - Astro Enemy Sound
+  - Scuba Enemy Sound
+  - Mob Enemy Sound
+  - Cowboy Enemy Sound
   layers:
   - Default
   - TransparentFX

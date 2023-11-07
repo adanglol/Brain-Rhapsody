@@ -49,7 +49,7 @@ MonoBehaviour:
   bulletsPerShot: 1
   bulletSpeed: 5
   bulletLife: 6
-  shotDelay: 5
+  shotDelay: 3
 --- !u!1 &139384851302019440
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   bulletsPerShot: 1
   bulletSpeed: 5
   bulletLife: 6
-  shotDelay: 5
+  shotDelay: 3
 --- !u!1 &1782037959257255202
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   bulletsPerShot: 1
   bulletSpeed: 5
   bulletLife: 6
-  shotDelay: 5
+  shotDelay: 3
 --- !u!1 &2706189231021904313
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +181,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8, y: 2.94, z: 0}
-  m_LocalScale: {x: 0.33594936, y: 0.33594936, z: 0.33594936}
+  m_LocalScale: {x: 0.9958229, y: 0.9958229, z: 0.9958229}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5985849407109652631}
@@ -310,7 +310,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 3.2, y: 3.2}
     newSize: {x: 19.2, y: 19.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -333,8 +333,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: 0
   chasesPlayer: 1
-  enemyHealth: 3
-  enemySpeed: 3
+  enemyHealth: 10
+  enemySpeed: 2
   enemyDeathSound: {fileID: -5717624823486657687}
 --- !u!82 &-5717624823486657687
 AudioSource:
@@ -481,7 +481,7 @@ MonoBehaviour:
   bulletsPerShot: 1
   bulletSpeed: 5
   bulletLife: 6
-  shotDelay: 5
+  shotDelay: 3
 --- !u!1 &4713206685011790620
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,7 +531,7 @@ MonoBehaviour:
   bulletsPerShot: 1
   bulletSpeed: 5
   bulletLife: 6
-  shotDelay: 5
+  shotDelay: 3
 --- !u!1 &6152057615344821010
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +581,7 @@ MonoBehaviour:
   bulletsPerShot: 1
   bulletSpeed: 5
   bulletLife: 6
-  shotDelay: 5
+  shotDelay: 3
 --- !u!1 &7653181150796172057
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,7 +631,7 @@ MonoBehaviour:
   bulletsPerShot: 1
   bulletSpeed: 5
   bulletLife: 6
-  shotDelay: 5
+  shotDelay: 3
 --- !u!1 &8216548950905972316
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +681,7 @@ MonoBehaviour:
   bulletsPerShot: 1
   bulletSpeed: 5
   bulletLife: 6
-  shotDelay: 5
+  shotDelay: 3
 --- !u!1 &8845041507784523084
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,4 +731,4 @@ MonoBehaviour:
   bulletsPerShot: 1
   bulletSpeed: 5
   bulletLife: 6
-  shotDelay: 5
+  shotDelay: 3

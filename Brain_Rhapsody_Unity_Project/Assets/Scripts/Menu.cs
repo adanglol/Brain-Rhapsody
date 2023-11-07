@@ -79,7 +79,7 @@ public class Menu : MonoBehaviour
     public void Guide()
     {
         Debug.Log("Guide");
-        SceneManager.LoadScene("Guide");
+        SceneManager.LoadScene("Guide 1");
     }
 
 

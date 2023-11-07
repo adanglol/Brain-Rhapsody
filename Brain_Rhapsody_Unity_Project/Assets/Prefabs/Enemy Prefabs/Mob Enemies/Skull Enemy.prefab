@@ -81,7 +81,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.16, y: -11.78, z: 0}
-  m_LocalScale: {x: 0.5260776, y: 0.5260776, z: 0.5260776}
+  m_LocalScale: {x: 0.8608734, y: 0.8608734, z: 0.8608734}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2329222847029683162}
@@ -152,9 +152,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 2
-  chasesPlayer: 0
-  enemyHealth: 10
-  enemySpeed: 0
+  chasesPlayer: 1
+  enemyHealth: 18
+  enemySpeed: 1
   enemyDeathSound: {fileID: 3777471416552095255}
 --- !u!50 &4589360178393887050
 Rigidbody2D:
@@ -215,18 +215,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.058152378, y: 0.06011176}
+  m_Offset: {x: -0.009616554, y: -0.0076568127}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 3.2, y: 3.2}
     newSize: {x: 19.2, y: 19.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8586178, y: 4.40183}
+  m_Size: {x: 1.7893769, y: 3.242231}
   m_EdgeRadius: 0
 --- !u!82 &3777471416552095255
 AudioSource:
