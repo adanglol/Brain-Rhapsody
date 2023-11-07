@@ -58,6 +58,7 @@
      <Compile Include="Assets/Scripts/EnemySpawner.cs" />
      <Compile Include="Assets/Scripts/BackgroundScript.cs" />
      <Compile Include="Assets/Scripts/EnemyBulletSpawnerScript.cs" />
+     <Compile Include="Assets/Scripts/MusicTransitions.cs" />
      <Compile Include="Assets/Scripts/PlayerBulletScript.cs" />
      <Compile Include="Assets/Scripts/PlayerMovement.cs" />
      <None Include="Assets/UI/BaseUI.uss" />
