@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 973838702}
   - component: {fileID: 973838701}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonStartImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,6 +273,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1036766642}
   - component: {fileID: 1036766643}
+  - component: {fileID: 1036766645}
+  - component: {fileID: 1036766644}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -297,7 +299,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 610, y: -6913}
+  m_AnchoredPosition: {x: 675, y: 8821}
   m_SizeDelta: {x: 39814, y: 13701}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1036766643
@@ -308,6 +310,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036766641}
   m_CullTransparentMesh: 1
+--- !u!114 &1036766644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036766641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1036766645}
+          m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+          m_MethodName: StartGame
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1036766645}
+          m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+          m_MethodName: HoverStart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1036766645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036766641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d656235634a3a6d4ab4b10deba00fbf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startButton: {fileID: 0}
+  creditButton: {fileID: 0}
+  quitButton: {fileID: 0}
+  buttonSprites: []
 --- !u!1 &1136626692
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,6 +579,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1268237156}
   - component: {fileID: 1268237157}
+  - component: {fileID: 1268237159}
+  - component: {fileID: 1268237158}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -551,6 +616,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268237155}
   m_CullTransparentMesh: 1
+--- !u!114 &1268237158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268237155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d656235634a3a6d4ab4b10deba00fbf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startButton: {fileID: 0}
+  creditButton: {fileID: 0}
+  quitButton: {fileID: 0}
+  buttonSprites: []
+--- !u!114 &1268237159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268237155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1268237158}
+          m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+          m_MethodName: QuitGame
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1316822422
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,6 +671,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1316822423}
   - component: {fileID: 1316822424}
+  - component: {fileID: 1316822426}
+  - component: {fileID: 1316822425}
   m_Layer: 5
   m_Name: CreditsButton
   m_TagString: Untagged
@@ -585,7 +697,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 545, y: -22648}
+  m_AnchoredPosition: {x: 576, y: -15096}
   m_SizeDelta: {x: 39814, y: 13701}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1316822424
@@ -596,6 +708,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316822422}
   m_CullTransparentMesh: 1
+--- !u!114 &1316822425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316822422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1316822426}
+          m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+          m_MethodName: Credits
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1316822426}
+          m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+          m_MethodName: HoverCredit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1316822426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316822422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d656235634a3a6d4ab4b10deba00fbf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startButton: {fileID: 0}
+  creditButton: {fileID: 0}
+  quitButton: {fileID: 0}
+  buttonSprites: []
 --- !u!1 &1380940622
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +777,7 @@ GameObject:
   - component: {fileID: 1380940625}
   - component: {fileID: 1380940624}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonQuitImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -857,6 +1026,16 @@ MonoBehaviour:
   startButton: {fileID: 1036766641}
   creditButton: {fileID: 1316822422}
   quitButton: {fileID: 1268237155}
+  buttonSprites:
+  - {fileID: 21300000, guid: bfebdc1d9b5b93044bc6a34e91e820e6, type: 3}
+  - {fileID: 21300000, guid: 12b5805f7dba91648801391e2f8a6038, type: 3}
+  - {fileID: 21300000, guid: 586887efaa9306a438f74d66d5c1c041, type: 3}
+  - {fileID: 21300000, guid: fee1a076dfb836742913f71cafa42391, type: 3}
+  - {fileID: 21300000, guid: 2aac92d380e97ff4596ea0c2a48e1ad2, type: 3}
+  - {fileID: 21300000, guid: 30920f4e58ac07c458b624b56817d382, type: 3}
+  - {fileID: 21300000, guid: 767c46b72430b0045870fa789b449104, type: 3}
+  - {fileID: 21300000, guid: 6c4665dc30bfb9e4bbbdae8d4b1e640a, type: 3}
+  - {fileID: 21300000, guid: 8dc7685285064ff4f9a67f9e285363ab, type: 3}
 --- !u!1 &1962973358
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,7 +1048,7 @@ GameObject:
   - component: {fileID: 1962973361}
   - component: {fileID: 1962973360}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonCreditsImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1052,7 +1231,7 @@ MonoBehaviour:
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 0.01
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
