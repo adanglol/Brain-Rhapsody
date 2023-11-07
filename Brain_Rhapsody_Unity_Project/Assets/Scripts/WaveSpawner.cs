@@ -41,7 +41,6 @@ public class WaveSpawner : MonoBehaviour
             gameStarted = true;
         }
         if(gameStarted){
-            
             waveSpawnTimer += Time.deltaTime; //update timer every frame
 
             if(waveSpawnTimer >= waveSpawnDelay){ //once the timer is met

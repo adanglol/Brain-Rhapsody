@@ -54,7 +54,7 @@ public class EnemyScript : MonoBehaviour
     void Update()
     {
         //check health every frame
-        if(enemyHealth == 0){
+        if(enemyHealth <= 0){
             isDead = true;
             enemyDeathSound.Play();
             StartCoroutine(enemyDeath());
@@ -123,7 +123,7 @@ public class EnemyScript : MonoBehaviour
     IEnumerator enemyDeath(){
         enemySprite.color = Color.black;
         yield return new WaitForSeconds(1.0f);
-        Destroy(this.gameObject);
         score.GetComponent<Score>().IncrementScore(1);
+        Destroy(this.gameObject);
     }
 }

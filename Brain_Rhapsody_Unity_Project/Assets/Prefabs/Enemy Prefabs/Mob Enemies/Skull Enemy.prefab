@@ -153,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: 2
   chasesPlayer: 0
-  enemyHealth: 120
+  enemyHealth: 10
   enemySpeed: 0
   enemyDeathSound: {fileID: 3777471416552095255}
 --- !u!50 &4589360178393887050

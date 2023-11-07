@@ -132,6 +132,15 @@ public class WeaponFireScript : MonoBehaviour
 
                     }
                     break;
+                case 3:
+                // Mob Boss Form SHOOT
+                    if(playerHealth.formStatus[2] == true)
+                    {
+                        Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
+                        mobFire.Play();
+
+                    }
+                    break;
                 case 4:
                     // Cowboy Form SHOOT
                     if(playerHealth.formStatus[3] == true)
@@ -139,17 +148,8 @@ public class WeaponFireScript : MonoBehaviour
                         ShootCowboySpread();
                     }
                     break;
-                case 0: //base player form is 10
+                case 0: //base player form
                     break;
-            }
-        }
-        if(playerHealth.formStatus[2] == true){
-            if (Input.GetMouseButton(0))
-            { // Mob Boss Fire Weapon
-                if(currentFormBullet == bulletSkins[2] && canFire && currentForm == 3)
-                {
-                    Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
-                }
             }
         }
     }

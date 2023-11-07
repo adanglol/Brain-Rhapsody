@@ -45,8 +45,8 @@
      <Compile Include="Assets/Scripts/EnemyScript.cs" />
      <Compile Include="Assets/Scripts/WeaponCursor.cs" />
      <Compile Include="Assets/Scripts/Score.cs" />
-     <Compile Include="Assets/UI/ButtonClicker.cs" />
      <Compile Include="Assets/HealthHeartSystem/Scripts/HealthBarHUDTester.cs" />
+     <Compile Include="Assets/Scripts/CutsceneScript.cs" />
      <Compile Include="Assets/Scripts/Menu.cs" />
      <Compile Include="Assets/Scripts/EnemyBulletScript.cs" />
      <Compile Include="Assets/HealthHeartSystem/Scripts/HealthBarController.cs" />
@@ -61,13 +61,9 @@
      <Compile Include="Assets/Scripts/MusicTransitions.cs" />
      <Compile Include="Assets/Scripts/PlayerBulletScript.cs" />
      <Compile Include="Assets/Scripts/PlayerMovement.cs" />
-     <Compile Include="Assets/CutsceneScript.cs" />
-     <None Include="Assets/UI/BaseUI.uss" />
      <None Include="Assets/ShootingSound/ReadMe.txt" />
      <None Include="Assets/Pixel Monster Pack/notes.txt" />
-     <None Include="Assets/UI/MainUI.uxml" />
      <None Include="Assets/HealthHeartSystem/readme.txt" />
-     <None Include="Assets/UI/Button.uxml" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2022.3.11f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
