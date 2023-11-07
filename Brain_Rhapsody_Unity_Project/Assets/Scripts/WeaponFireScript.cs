@@ -157,6 +157,7 @@ public class WeaponFireScript : MonoBehaviour
                 if(currentFormBullet == bulletSkins[2] && canFire && currentForm == 3)
                 {
                     Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
+                    mobFire.Play();
                 }
             }
         }
