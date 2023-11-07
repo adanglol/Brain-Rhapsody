@@ -52,6 +52,9 @@ public class PlayerHealth : MonoBehaviour
     // refer to enemy script
     public EnemyScript enemyScript;
 
+    // refer to score script
+    public Score scoreScript;
+
   
     void Start()
     {
@@ -86,10 +89,10 @@ public class PlayerHealth : MonoBehaviour
                 //  Create a new game object for each health unit
                 GameObject healthUnit = new GameObject("HealthUnitImage" + j);
                 healthUnit.transform.SetParent(container);
-                // Create an Image component for each health unit
+                // Create an Image component for each health unit .5 .3
                 Image healthUnitImage = healthUnit.gameObject.AddComponent<Image>();
-                float scaleX = 0.5f; // Image will be half the original width
-                float scaleY = .3f; // Image will be half the original height
+                float scaleX = 1f; // Image will be half the original width
+                float scaleY = .5f; // Image will be half the original height
                 healthUnitImage.transform.localScale = new Vector3(scaleX, scaleY, 1);
                 // Set the size and position of the Image
                 RectTransform imageRect = healthUnitImage.rectTransform;
@@ -121,14 +124,14 @@ public class PlayerHealth : MonoBehaviour
         RectTransform fourthFormIcon = formIcons[3];
         Text[] texts4 = fourthFormIcon.GetComponentsInChildren<Text>();
 
-        // Grabbing the Image component from each form icon
-        Image images = firstFormIcon.GetComponent<Image>();
+        // Grabbing Image component from each form icon
+        Image iconImage = formIcons[0].GetComponent<Image>();
+        Image iconImage2 = formIcons[1].GetComponent<Image>();
+        Image iconImage3 = formIcons[2].GetComponent<Image>();
+        Image iconImage4 = formIcons[3].GetComponent<Image>();
 
-        Image images2 = secondFormIcon.GetComponent<Image>();
 
-        Image images3 = thirdFormIcon.GetComponent<Image>();
-
-        Image images4 = fourthFormIcon.GetComponent<Image>();
+    
 
         if(formStatus[0] == true){
             if(Input.GetKeyDown("1"))
@@ -163,13 +166,15 @@ public class PlayerHealth : MonoBehaviour
                     iconTextColor.a = 1f; // Set the alpha (transparency) to zero
                     text.color = iconTextColor;
                 }
+                iconImage.sprite = formIconSprites[0]; // Use the appropriate sprite index
+                iconImage2.sprite = formIconSprites[5];
+                iconImage3.sprite = formIconSprites[6];
+                iconImage4.sprite = formIconSprites[7];
 
-                // images.sprite = formIconSprites[0];
-                // Change the sprite of the Image component
-                // images.sprite = formIconSprites[3];
-                // images2.sprite = formIconSprites[1];
-                // images3.sprite = formIconSprites[2];
-                // images4.sprite = formIconSprites[3];
+
+
+
+              
                
             }
         }
@@ -206,6 +211,10 @@ public class PlayerHealth : MonoBehaviour
                         iconTextColor.a = 1f; // Set the alpha (transparency) to zero
                         text.color = iconTextColor;
                     }
+                    iconImage2.sprite = formIconSprites[1]; // Use the appropriate sprite index
+                    iconImage.sprite = formIconSprites[4];
+                    iconImage3.sprite = formIconSprites[6];
+                    iconImage4.sprite = formIconSprites[7];
             }
         }
 
@@ -240,6 +249,10 @@ public class PlayerHealth : MonoBehaviour
                         iconTextColor.a = 1f; // Set the alpha (transparency) to zero
                         text.color = iconTextColor;
                     }
+                    iconImage3.sprite = formIconSprites[2]; // Use the appropriate sprite index
+                    iconImage.sprite = formIconSprites[4];
+                    iconImage2.sprite = formIconSprites[5];
+                    iconImage4.sprite = formIconSprites[7];
             }
         }
         if(formStatus[3] == true){
@@ -273,6 +286,10 @@ public class PlayerHealth : MonoBehaviour
                         iconTextColor.a = 1f; // Set the alpha (transparency) to zero
                         text.color = iconTextColor;
                     }
+                    iconImage4.sprite = formIconSprites[3]; // Use the appropriate sprite index
+                    iconImage.sprite = formIconSprites[4];
+                    iconImage2.sprite = formIconSprites[5];
+                    iconImage3.sprite = formIconSprites[6];
             }
         }
     
@@ -392,6 +409,8 @@ public class PlayerHealth : MonoBehaviour
             }
             else // No forms left alive game over
             {
+                // Store final score in player prefs
+                PlayerPrefs.SetInt("FinalScore", scoreScript.GetScore());
                 // GAME OVER
                 SceneManager.LoadScene("GameOver");
             }
@@ -409,7 +428,8 @@ public class PlayerHealth : MonoBehaviour
                 UpdateHealthUI();
                 Debug.Log("Switched to Form " + currentForm);
                 // Switch to the next form sprite
-                rend.sprite = playerSkins[currentForm - 1];
+                // currentform -1
+                rend.sprite = playerSkins[currentForm];
                 // Switch to the next bullet skin for the weapon
                 weaponFireScript.currentFormBullet = weaponFireScript.bulletSkins[currentForm - 1];
                 // // Switch the weapon as well

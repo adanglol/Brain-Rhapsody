@@ -31,6 +31,6 @@ public class ButtonClicker : MonoBehaviour
     public void onButtonClick(ClickEvent evt)
     {
         Debug.Log("Button Clicked");
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("JO_Workspace");
     }
 }

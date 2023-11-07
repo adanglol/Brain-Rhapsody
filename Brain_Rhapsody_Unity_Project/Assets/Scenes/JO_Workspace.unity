@@ -807,6 +807,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5024416820460314949, guid: bb882b6171c81a544812d92d88ca6c3b, type: 3}
   m_PrefabInstance: {fileID: 8871147868532276509}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &618123379
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2706189231021904313, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
+      propertyPath: m_Name
+      value: Space Wizard (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2706189231021904313, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
+      propertyPath: m_TagString
+      value: Cowboy Enemies
+      objectReference: {fileID: 0}
+    - target: {fileID: 3024402235985947925, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1429595010}
+    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
 --- !u!1 &732368503
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,7 +1022,7 @@ GameObject:
   m_Component:
   - component: {fileID: 794569810}
   - component: {fileID: 794569812}
-  - component: {fileID: 794569811}
+  - component: {fileID: 794569813}
   m_Layer: 5
   m_Name: ScubaFormIcon
   m_TagString: Untagged
@@ -985,7 +1050,15 @@ RectTransform:
   m_AnchoredPosition: {x: -150, y: -436}
   m_SizeDelta: {x: 331.46, y: 331.46}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &794569811
+--- !u!222 &794569812
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794569809}
+  m_CullTransparentMesh: 1
+--- !u!114 &794569813
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -994,7 +1067,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 794569809}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -1005,21 +1078,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: ce11113cad6400540ba38c96b14b3b48, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &794569812
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 794569809}
-  m_CullTransparentMesh: 1
+  m_Sprite: {fileID: 21300000, guid: ce11113cad6400540ba38c96b14b3b48, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &831319180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1749,7 +1817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1199469332}
   - component: {fileID: 1199469334}
-  - component: {fileID: 1199469333}
+  - component: {fileID: 1199469335}
   m_Layer: 5
   m_Name: MobFormIcon
   m_TagString: Untagged
@@ -1777,7 +1845,15 @@ RectTransform:
   m_AnchoredPosition: {x: 150, y: -436}
   m_SizeDelta: {x: 331.46, y: 331.46}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1199469333
+--- !u!222 &1199469334
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199469331}
+  m_CullTransparentMesh: 1
+--- !u!114 &1199469335
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1786,7 +1862,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1199469331}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -1797,21 +1873,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 9b8522c04764fff468bc6fb7062acb74, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &1199469334
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1199469331}
-  m_CullTransparentMesh: 1
+  m_Sprite: {fileID: 21300000, guid: 9b8522c04764fff468bc6fb7062acb74, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &1201073287 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8815597687795265466, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
@@ -2010,7 +2081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1540580927}
   - component: {fileID: 1540580929}
-  - component: {fileID: 1540580928}
+  - component: {fileID: 1540580930}
   m_Layer: 5
   m_Name: CowFormIcon
   m_TagString: Untagged
@@ -2038,7 +2109,15 @@ RectTransform:
   m_AnchoredPosition: {x: 449, y: -436}
   m_SizeDelta: {x: 331.46, y: 331.46}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1540580928
+--- !u!222 &1540580929
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540580926}
+  m_CullTransparentMesh: 1
+--- !u!114 &1540580930
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2047,7 +2126,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1540580926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -2058,21 +2137,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 889e3cbfd24ffc040805dd3b9bcffd76, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &1540580929
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540580926}
-  m_CullTransparentMesh: 1
+  m_Sprite: {fileID: 21300000, guid: 889e3cbfd24ffc040805dd3b9bcffd76, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1633682762
 GameObject:
   m_ObjectHideFlags: 0
@@ -2149,7 +2223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1714618621}
   - component: {fileID: 1714618623}
-  - component: {fileID: 1714618622}
+  - component: {fileID: 1714618624}
   m_Layer: 5
   m_Name: AstroFormIcon
   m_TagString: Untagged
@@ -2177,7 +2251,15 @@ RectTransform:
   m_AnchoredPosition: {x: -445, y: -436}
   m_SizeDelta: {x: 331.46, y: 331.46}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1714618622
+--- !u!222 &1714618623
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714618620}
+  m_CullTransparentMesh: 1
+--- !u!114 &1714618624
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2186,7 +2268,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1714618620}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -2197,21 +2279,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 3945a4ee6407ace4f9b27457d21c0ca1, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &1714618623
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1714618620}
-  m_CullTransparentMesh: 1
+  m_Sprite: {fileID: 21300000, guid: 3945a4ee6407ace4f9b27457d21c0ca1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1732996085
 GameObject:
   m_ObjectHideFlags: 0
@@ -2914,6 +2991,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5630172695154829205, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1429595010}
+    - target: {fileID: 5630172695154829205, guid: d807d0929bf1d0b419529c4f3d197076, type: 3}
       propertyPath: healthUnitSprite
       value: 
       objectReference: {fileID: 21300000, guid: ab8881cad8202e84b800a55de9d9994c, type: 3}
@@ -3307,5 +3388,6 @@ SceneRoots:
   - {fileID: 5542213630520918870}
   - {fileID: 282825367}
   - {fileID: 7772403861959131499}
+  - {fileID: 618123379}
   - {fileID: 4719103375456740586}
   - {fileID: 1198679436}
