@@ -22,11 +22,7 @@ public class WeaponFireScript : MonoBehaviour
     private Camera mainCam;
     private Vector3 mousePos;
 
-    // AstroNaut Form Settings charge shot
-    private bool isCharging = false;
-    private float chargeTime = 0.0f;
-    public float maxChargeTime = 3.0f;
-    public float maxChargeDamage = 10.0f;
+
 
    
     // Spread Settings for Cowboy Form
@@ -38,10 +34,6 @@ public class WeaponFireScript : MonoBehaviour
 
     //private utils
     private int currentForm;
-  
-    void Awake(){
-        // currentForm = 10;
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -160,51 +152,8 @@ public class WeaponFireScript : MonoBehaviour
                 }
             }
         }
-
-         if (isCharging)
-        {
-            chargeTime += Time.deltaTime;
-            Debug.Log("Charge Time: " + chargeTime);
-
-            // TBI - add visual feedback for charge
-
-            if (chargeTime >= maxChargeTime)
-            {
-                // Fire a charged bullet
-                Debug.Log("Fire Charged Bullet");
-                FireChargedBullet();
-                isCharging = false;
-
-            }
-        }
-        
-
-   
-
-      
-       
     }
 
-    // Method to fire a charged bullet
-     void FireChargedBullet()
-    {
-        // Instantiate the charged bullet with the current damage
-        GameObject chargedBullet = Instantiate(currentFormBullet, bulletTransform.position, Quaternion.identity);
-
-        // Set the bullet's damage based on 'chargeTime' and 'maxChargeDamage'
-
-        // Add a cooldown before the next charge can start
-        StartCoroutine(RechargeCooldown());
-    }
-
-    // Coroutine to add a cooldown before the next charge can start
-     IEnumerator RechargeCooldown()
-    {
-        yield return new WaitForSeconds(2f); // Adjust the recharge cooldown time as needed
-        chargeTime = 0; // Reset charge time
-    }
-   
-   
     // Method handle Cowboy Form's spread shot
     void ShootCowboySpread()
     {

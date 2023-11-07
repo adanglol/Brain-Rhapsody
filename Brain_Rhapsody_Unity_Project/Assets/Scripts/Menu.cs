@@ -38,7 +38,7 @@ public class Menu : MonoBehaviour
         // Change the sprite of the button to the pressed sprite
 
         // load the game scene
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene("IntroCutscene");
     }
 
     public void HoverCredit(){
@@ -74,6 +74,12 @@ public class Menu : MonoBehaviour
     {
         Debug.Log("Quit Menu");
         SceneManager.LoadScene("Menu");
+    }
+
+    public void Guide()
+    {
+        Debug.Log("Guide");
+        SceneManager.LoadScene("Guide");
     }
 
 

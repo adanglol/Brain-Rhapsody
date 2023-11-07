@@ -1,6 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/BaseUI.uss?fileID=7433441132597879392&amp;guid=03e16f755e3c7e945abfd15b37c8d7e0&amp;type=3#BaseUI" />
-    <ui:VisualElement name="Container" style="flex-grow: 1;">
-        <ui:Label tabindex="-1" text="Brain Rhapsody" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" class="header" />
-    </ui:VisualElement>
-</ui:UXML>
