@@ -233,6 +233,7 @@ MonoBehaviour:
   chasesPlayer: 0
   enemyHealth: 5
   enemySpeed: 4
+  score: {fileID: 200366349954838354, guid: 8adae899c37dc4c1c8b19ce6bfa0ca4d, type: 3}
 --- !u!1 &2428015643856354239
 GameObject:
   m_ObjectHideFlags: 0

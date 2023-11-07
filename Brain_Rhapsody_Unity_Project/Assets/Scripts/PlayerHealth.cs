@@ -305,7 +305,7 @@ public class PlayerHealth : MonoBehaviour
             }
         }
             
-        // Switch between forms shown on the UI for health
+        //------------------------- SWITCH UI HEALTH BARS -------------------------
         switch(currentForm)
         {
             case 0:
@@ -347,6 +347,11 @@ public class PlayerHealth : MonoBehaviour
                 break;               
         }
     }
+
+    //************************** PRIVATE METHODS ************************** 
+
+
+    //------------------------- ENEMY COLLISION DETECTION -------------------------
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (currentForm > 0) // Check if it's not the base form
@@ -371,14 +376,39 @@ public class PlayerHealth : MonoBehaviour
             }
         }
     }
-    // When the player gets hit by bullet
 
+    //------------------------- BULLET DETECTION -------------------------
+    private void OnTriggerEnter2D(Collider2D collision){
+        if(currentForm > 0){
+            
+        }
+                if (collision.gameObject.CompareTag("Astro Enemy Bullet") && currentForm != 1)
+                {
+                    TakeDamage();
+                }
+                else if (collision.gameObject.CompareTag("Scuba Enemy Bullet") && currentForm != 2)
+                {
+                    TakeDamage();
+                }
+                else if (collision.gameObject.CompareTag("Mob Enemy Bullet") && currentForm != 3)
+                {
+                    TakeDamage();
+                }
+                else if (collision.gameObject.CompareTag("Cowboy Enemy Bullet") && currentForm != 4)
+                {
+                    TakeDamage();
+                    
+                }
+    }
+    //------------------------- PLAYER TAKES DAMAGE -------------------------
     private void TakeDamage()
     {
         // TAKE DAMAGE
         formHealth[currentForm - 1] -= 1; // Adjust for zero-based indexing
         // PLAY SOUND
         hitSound.Play();
+        //PLAY HIT ANIMATION
+        StartCoroutine(playerHitAnimation());
         // UPDATE UI FOR THAT FORM
         UpdateHealthUI();
         // CHECK IF FORM IS DEAD
@@ -416,6 +446,7 @@ public class PlayerHealth : MonoBehaviour
             }
         }
     }
+    //------------------------- PLAYER SWITCHES FORMS -------------------------
     private void SwitchToNextForm()
     {
         // Start checking from the next form after the current one
@@ -439,8 +470,7 @@ public class PlayerHealth : MonoBehaviour
             }
         }
     }
-        
-
+    //------------------------- UPDATE PLAYER HEALTH UI -------------------------
     private void UpdateHealthUI()
     {
         if (currentForm > 0) // Check if it's not the base form
@@ -457,6 +487,26 @@ public class PlayerHealth : MonoBehaviour
                 healthUnitImage.enabled = (i < currentHealthUnits);
             }
         }
+    }
+
+    //*************************** COROUTINES ***************************
+
+    // HIT ANIMATION WHEN PLAYER IS HIT BY BULLET OR ENEMY
+    private IEnumerator playerHitAnimation(){
+        if(currentForm == 1){
+            rend.color = Color.red;
+        }
+        else if(currentForm == 2){
+            rend.color = Color.blue;
+        }
+        else if(currentForm == 3){
+            rend.color = new Color(0.4f,0.4f,0.4f,1.0f);
+        }
+        else if(currentForm == 4){
+            rend.color = Color.yellow;
+        }
+        yield return new WaitForSeconds(0.1f);
+        rend.color = Color.white;
     }
    
 }

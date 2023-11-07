@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7282050974320653266}
   m_Layer: 6
   m_Name: Wine Bullet
-  m_TagString: Enemy Bullet
+  m_TagString: Mob Enemy Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

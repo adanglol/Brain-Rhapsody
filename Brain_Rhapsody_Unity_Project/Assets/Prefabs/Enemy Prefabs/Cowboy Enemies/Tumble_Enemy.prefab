@@ -103,6 +103,7 @@ MonoBehaviour:
   chasesPlayer: 1
   enemyHealth: 25
   enemySpeed: 5
+  score: {fileID: 200366349954838354, guid: 8adae899c37dc4c1c8b19ce6bfa0ca4d, type: 3}
 --- !u!50 &4011829923584238994
 Rigidbody2D:
   serializedVersion: 4
@@ -159,7 +160,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.05003202, y: -0.22410703}
