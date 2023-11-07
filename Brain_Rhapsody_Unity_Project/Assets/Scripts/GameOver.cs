@@ -24,6 +24,11 @@ public class GameOverManager : MonoBehaviour
         // Reset the score value in PlayerPrefs
         PlayerPrefs.SetInt("FinalScore", 0);
         // Reload the scene
-        SceneManager.LoadScene("JO_Workspace");
+        SceneManager.LoadScene("MainGame");
+    }
+
+    public void BacktoMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }

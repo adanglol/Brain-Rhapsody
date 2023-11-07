@@ -299,8 +299,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 753018907}
-  - component: {fileID: 753018909}
   - component: {fileID: 753018908}
+  - component: {fileID: 753018909}
   m_Layer: 5
   m_Name: QuitContainer
   m_TagString: Untagged
@@ -346,8 +346,8 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 753018909}
-          m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-          m_MethodName: QuitGame
+          m_TargetAssemblyTypeName: GameOverManager, Assembly-CSharp
+          m_MethodName: BacktoMenu
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -366,13 +366,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 753018906}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d656235634a3a6d4ab4b10deba00fbf6, type: 3}
+  m_Script: {fileID: 11500000, guid: 9eab4ef0d9ac05847ad6c5b1a43833dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startButton: {fileID: 0}
-  creditButton: {fileID: 0}
-  quitButton: {fileID: 0}
-  buttonSprites: []
+  finalScoreText: {fileID: 1731868466}
 --- !u!1 &810997141
 GameObject:
   m_ObjectHideFlags: 0

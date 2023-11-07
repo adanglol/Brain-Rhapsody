@@ -38,7 +38,7 @@ public class Menu : MonoBehaviour
         // Change the sprite of the button to the pressed sprite
 
         // load the game scene
-        SceneManager.LoadScene("JO_Workspace");
+        SceneManager.LoadScene("MainGame");
     }
 
     public void HoverCredit(){
