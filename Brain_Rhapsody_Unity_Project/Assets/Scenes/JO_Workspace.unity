@@ -641,71 +641,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5024416820460314949, guid: bb882b6171c81a544812d92d88ca6c3b, type: 3}
   m_PrefabInstance: {fileID: 8871147868532276509}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &618123379
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2706189231021904313, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
-      propertyPath: m_Name
-      value: Space Wizard (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706189231021904313, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
-      propertyPath: m_TagString
-      value: Cowboy Enemies
-      objectReference: {fileID: 0}
-    - target: {fileID: 3024402235985947925, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
-      propertyPath: score
-      value: 
-      objectReference: {fileID: 1429595010}
-    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 13.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6774452178137090380, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f0524b80e9794284ebf0ace394a8c88b, type: 3}
 --- !u!1 &732368503
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,12 +681,13 @@ MonoBehaviour:
   - {fileID: 6121993819139355549, guid: da09fb1954ee14d8499fe7413d82a717, type: 3}
   - {fileID: 2666578261075402645, guid: 6264c4adec4888f4db8cdb3da4332e65, type: 3}
   - {fileID: 7411664260822763998, guid: 0d30ba51ce1c58144988376331e2b26c, type: 3}
-  waveSpawnDelay: 15
-  amountToSpawn: 3
+  waveSpawnDelay: 10
+  amountToSpawn: 2
   xLeftBounds: -32
   xRightBounds: 35
   yBottomBounds: 15.5
   yTopBounds: -19
+  playerHealth: {fileID: 1931380647}
 --- !u!4 &732368505
 Transform:
   m_ObjectHideFlags: 0

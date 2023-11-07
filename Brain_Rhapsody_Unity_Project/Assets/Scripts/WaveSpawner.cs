@@ -16,12 +16,17 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] private float yBottomBounds;
     [SerializeField] private float yTopBounds;
 
+    public PlayerHealth playerHealth;
+
     //private utility variables
     private bool canSpawn;
     private float waveSpawnTimer;
     private int currentWave;
+    private bool gameStarted;
     
-
+    void Awake(){
+        gameStarted = false;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -32,17 +37,26 @@ public class WaveSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        waveSpawnTimer += Time.deltaTime; //update timer every frame
+        if(playerHealth.currentForm != 0){
+            gameStarted = true;
+        }
+        if(gameStarted){
+            
+            waveSpawnTimer += Time.deltaTime; //update timer every frame
 
-        if(waveSpawnTimer >= waveSpawnDelay){ //once the timer is met
-            canSpawn = true; //spawner can spawn enemies
-            waveSpawnTimer = 0; //reset timer
+            if(waveSpawnTimer >= waveSpawnDelay){ //once the timer is met
+                canSpawn = true; //spawner can spawn enemies
+                waveSpawnTimer = 0; //reset timer
+            }
+            if(canSpawn){
+                SpawnEnemies(amountToSpawn);
+                currentWave++;
+                canSpawn = false;
+            }
         }
-        if(canSpawn){
-            SpawnEnemies(amountToSpawn);
-            currentWave++;
-            canSpawn = false;
-        }
+
+
+        
     }
 
     //method that spawns enemies at random positions in a rectangular bound that can be adjusted via inspector

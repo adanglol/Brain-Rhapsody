@@ -26,9 +26,7 @@ public class EnemyScript : MonoBehaviour
     //[SerializeField] private AudioSource enemyDeathSound;
 
     // reference score
-    public Score score;
-
-
+    private GameObject score;
 
 
 
@@ -41,6 +39,8 @@ public class EnemyScript : MonoBehaviour
 
     void Awake()
     {
+        score = GameObject.FindWithTag("Score");
+        
         chaseTarget = GameObject.FindWithTag("Player");
     }
     // Start is called before the first frame update
@@ -54,7 +54,7 @@ public class EnemyScript : MonoBehaviour
     void Update()
     {
         //check health every frame
-        if(enemyHealth <= 0){
+        if(enemyHealth == 0){
             isDead = true;
             StartCoroutine(enemyDeath());
         }
@@ -111,14 +111,12 @@ public class EnemyScript : MonoBehaviour
                 }
             }
         }
-    
-}
+    }
 //------------------------------ Coroutines ------------------------------
     IEnumerator hitAnimation()
-    {
+    {   
         yield return new WaitForSeconds(0.1f);
         enemySprite.color = Color.white;
-
     }
 
     IEnumerator enemyDeath(){
@@ -126,6 +124,6 @@ public class EnemyScript : MonoBehaviour
         //enemyDeathSound.Play();
         yield return new WaitForSeconds(1.0f);
         Destroy(this.gameObject);
-        score.IncrementScore(1);
+        score.GetComponent<Score>().IncrementScore(1);
     }
 }

@@ -14,6 +14,11 @@ TagManager:
   - Cowboy Bullet
   - Wall
   - Enemy Bullet
+  - Cowboy Enemy Bullet
+  - Scuba Enemy Bullet
+  - Mob Enemy Bullet
+  - Astro Enemy Bullet
+  - Score
   layers:
   - Default
   - TransparentFX
