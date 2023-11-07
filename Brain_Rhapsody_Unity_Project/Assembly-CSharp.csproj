@@ -58,8 +58,10 @@
      <Compile Include="Assets/Scripts/EnemySpawner.cs" />
      <Compile Include="Assets/Scripts/BackgroundScript.cs" />
      <Compile Include="Assets/Scripts/EnemyBulletSpawnerScript.cs" />
+     <Compile Include="Assets/Scripts/MusicTransitions.cs" />
      <Compile Include="Assets/Scripts/PlayerBulletScript.cs" />
      <Compile Include="Assets/Scripts/PlayerMovement.cs" />
+     <Compile Include="Assets/CutsceneScript.cs" />
      <None Include="Assets/UI/BaseUI.uss" />
      <None Include="Assets/ShootingSound/ReadMe.txt" />
      <None Include="Assets/Pixel Monster Pack/notes.txt" />

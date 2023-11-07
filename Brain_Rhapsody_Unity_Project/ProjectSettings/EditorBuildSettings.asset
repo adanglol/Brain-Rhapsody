@@ -31,4 +31,7 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroCutscene.unity
     guid: 169352db51be1403ab530b15369e1e6c
 >>>>>>> 2dca74fbabbe3340f7195f167b00b7d77aeb46a9
+  - enabled: 1
+    path: Assets/Scenes/IntroCutscene.unity
+    guid: 169352db51be1403ab530b15369e1e6c
   m_configObjects: {}
