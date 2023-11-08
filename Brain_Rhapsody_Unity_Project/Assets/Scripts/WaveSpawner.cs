@@ -31,7 +31,7 @@ public class WaveSpawner : MonoBehaviour
     void Start()
     {
         waveSpawnTimer = 0;
-        currentWave = 0;
+        currentWave = 1;
     }
 
     // Update is called once per frame
@@ -50,8 +50,14 @@ public class WaveSpawner : MonoBehaviour
             if(canSpawn){
                 SpawnEnemies(amountToSpawn);
                 currentWave++;
+                //every 10 waves, increase number of enemies spawned
+                if (currentWave % 10 == 0)
+                {
+                    amountToSpawn++;
+                }
                 canSpawn = false;
             }
+            
         }
 
 
@@ -68,5 +74,6 @@ public class WaveSpawner : MonoBehaviour
             GameObject randomEnemy = enemyPrefabs[randomIndex]; //pick a random enemy prefab from the array
             Instantiate(randomEnemy, randomPosition, Quaternion.identity); //spawn enemy at radom location
         }
+
     }
 }
